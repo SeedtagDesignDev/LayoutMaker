@@ -717,6 +717,10 @@ button.generator-generate:hover{
   display: none;
 }
 
+[data-type="video"] .element-config-extension {
+  display: none;
+}
+
 
 /* === Media queries === */
 
