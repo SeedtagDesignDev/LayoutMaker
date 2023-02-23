@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon"
+        href="https://www.seedtag.com/static/images/seedtag-icon-red-aed656eca0e6f5a14a5ed6fc62e0d878.svg" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <title>Layout Maker</title>
+</head>
+
+<body>
+    <div class="app-container building-CBV view-full view-bar-video view-bar-show">
+
+        <div class="generator-container">
+
+            <div class="generator-header">
+                <input type="text" class="generator-config-name" value="main" placeholder="Component name">
+                <div>
+                    <button class="generator-clear">Clear code</button>
+                    <!-- <select class="generator-config-component">
+                        <option value="Front layer" selected>Front layer</option>
+                        <option value="Slide layer">Slide layer</option>
+                        <option value="Configuration layer">Configuration layer</option>
+                    </select> -->
+                    <select class="generator-config-format">
+                        <option value="CED">CED</option>
+                        <option value="CID">CID</option>
+                        <option value="CEV">CEV</option>
+                        <option value="CBV" selected>CBV</option>
+                    </select>
+                    <select class="generator-config-scene">
+                        <option value="all" selected>View all scenes</option>
+                        <option value="full">Full</option>
+                        <option value="bar-video">Bar-Video</option>
+                        <option value="bar-show">Bar-Show</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Elements (layout collections) -->
+            <div class="generator-element-container">
+            </div>
+
+            <div class="generator-footer">
+                <select class="generator-add">
+                    <option value="Add" disabled hidden selected>Add element</option>
+                    <option value="bg">Background</option>
+                    <option value="element">Element</option>
+                    <option value="cta">CTA</option>
+                    <option value="legal">Legal</option>
+                    <option value="logo">Logo</option>
+                    <option value="video">Video</option>
+                </select>
+                <button class="generator-generate">Generate code</button>
+            </div>
+        </div>
+
+
+        <div class="preview-container">
+            <h3>Result preview</h3>
+            <div class="preview">
+                <div class="preview-full preview-vertical" data-scene="full" data-size="vertical"></div>
+                <div class="preview-full preview-horizontal" data-scene="full" data-size="horizontal"></div>
+                <div class="preview-bar-video preview-mobile" data-scene="bar-video" data-size="mobile"></div>
+                <div class="preview-bar-video preview-desktop" data-scene="bar-video" data-size="desktop"></div>
+                <div class="preview-bar-show preview-mobile" data-scene="bar-show" data-size="mobile"></div>
+                <div class="preview-bar-show preview-desktop" data-scene="bar-show" data-size="desktop"></div>
+            </div>
+
+        </div>
+
+        <div class="results-container">
+            <div class="result-container">
+                <div class="input-title-container">
+                    <p class="result-title">@component/component.html</p>
+                    <button data-result="html" class="result-copy">Copy</button>
+                </div>
+                <textarea data-result="html" class="result-html" rows="12" cols="200" spellcheck="false" wrap="off"></textarea>
+            </div>
+
+            <div class="result-container">
+                <div class="input-title-container">
+                    <p class="result-title">@component/component.css</p>
+                    <button data-result="css-component" class="result-copy">Copy</button>
+                </div>
+                <textarea data-result="css-component" class="result-css-component" rows="12" cols="200" spellcheck="false" wrap="off"></textarea>
+            </div>
+
+            <div class="result-container">
+                <div class="input-title-container">
+                    <p class="result-title">@scene/full.css</p>
+                    <button data-result="css-full" class="result-copy">Copy</button>
+                </div>
+                <textarea data-result="css-full" class="result-css-full" rows="12" cols="200" spellcheck="false" wrap="off"></textarea>
+            </div>
+           
+            <div class="result-container">
+                <div class="input-title-container">
+                    <p class="result-title">@scene/bar-video.css</p>
+                    <button data-result="css-bar-video" class="result-copy">Copy</button>
+                </div>
+                <textarea data-result="css-bar-video" class="result-css-bar-video" rows="12" cols="200" spellcheck="false" wrap="off"></textarea>
+            </div>
+            
+            <div class="result-container">
+                <div class="input-title-container">
+                    <p class="result-title">@scene/bar-show.css</p>
+                    <button data-result="css-bar-show" class="result-copy">Copy</button>
+                </div>
+                <textarea data-result="css-bar-show" class="result-css-bar-show" rows="12" cols="200" spellcheck="false" wrap="off"></textarea>
+            </div>
+
+            <div class="result-container">
+                <div class="input-title-container">
+                    <p class="result-title">@component/component.js</p>
+                    <button data-result="js" class="result-copy">Copy</button>
+                </div>
+                <textarea data-result="js" class="result-js" rows="12" cols="200" spellcheck="false" wrap="off"></textarea>
+            </div>
+
+            <div class="back-to-top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><polygon fill="#ececec" points="20 12 11.92 26 28.08 26 20 12"/><circle fill="transparent" cx="20" cy="20" r="20"/></svg>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/layouts.js" type="module"></script> -->
+</body>
+
+</html>
