@@ -421,12 +421,15 @@ select {
 }
 
 [data-type="video"] .layout-image {
+  width: 40%;
+  bottom: 0;
   background-color: var(--main-st-lighter-blue) !important;
 }
 
 [data-type="video"] .layouts-bar-video-mobile .layout-image,
 [data-type="video"] .layouts-bar-show-mobile .layout-image {
-  bottom: 50% !important;
+  /* bottom: 50% !important; */
+  /* Delete */
 }
 
 [data-type="element"] .layout-image {
@@ -553,18 +556,20 @@ button.generator-generate:hover{
 }
 
 .preview-desktop [data-type="video"] {
+  width: 40%;
   height: 120%;
   bottom: 0;
 }
 
 .preview-mobile [data-type="video"] {
+  width: 40%;
   height: 80%;
   bottom: 10%;
 }
 
-.preview-mobile .preview-image[data-type="video"] {
+/* .preview-mobile .preview-image[data-type="video"] {
   bottom: 50% !important;
-}
+} */
 
 .preview-image[data-type="video"] {
   background-color: var(--main-st-darkest-blue) !important;

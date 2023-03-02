@@ -597,16 +597,16 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 40%;left: 24%;bottom: 40px;transform: translateY(50%) translateX(-50%);',
+                    css: 'left: 24%;',
                 },
                 {
-                    css: 'width: 40%;left: 50%;bottom: 40px;transform: translateY(50%) translateX(-50%);',
+                    css: 'left: 50%;',
                 },
                 {
-                    css: 'width: 40%;left: 54%;bottom: 40px;transform: translateY(50%) translateX(-50%);',
+                    css: 'left: 54%;',
                 },
                 {
-                    css: 'width: 40%;left: 70%;bottom: 40px;transform: translateY(50%) translateX(-50%);',
+                    css: 'left: 70%;',
                 }
             ],
             desktop: [
@@ -614,16 +614,16 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 40%;left: 24%;bottom: 0;transform: translateY(0) translateX(-50%);',
+                    css: 'left: 24%;',
                 },
                 {
-                    css: 'width: 40%;left: 50%;bottom: 0;transform: translateY(0) translateX(-50%);',
+                    css: 'left: 50%;',
                 },
                 {
-                    css: 'width: 40%;left: 54%;bottom: 0;transform: translateY(0) translateX(-50%);',
+                    css: 'left: 54%;',
                 },
                 {
-                    css: 'width: 40%;left: 70%;bottom: 0;transform: translateY(0) translateX(-50%);',
+                    css: 'left: 70%;',
                 }
                 
             ]
@@ -749,10 +749,9 @@ const animations = [
     }
 ];
 
-const videoBarAnimationCEV = '.video{\n  transform: translateY(150px) translateX(-50%);\n  .active &{\n    transform: translateY(0) translateX(-50%);\n    transition: .6s;\n  }\n  @media (max-width: 440px) {\n    bottom: 50px;\n    .active & {\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n  .mobile & {\n    bottom: 40px;\n    .active & {\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n}\n';
-const videoBarAnimationCBV = '\n\n/* === Animations === */\n\n.video {\n  .feature-placement-inScreen &{\n    transform: translateY(150px) translateX(-50%);\n  }\n  .feature-placement-inScreen .active &{\n    transform: translateY(0) translateX(-50%);\n    transition: .6s;\n    @media (max-width: 440px){\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n  .feature-placement-inScreen.mobile .active &{\n    transform: translateY(50%) translateX(-50%);\n  }\n}\n\n';
-const videoBarAdjustment = '\n  @media (max-width: 440px){\n    bottom: 50px;\n    transform: translateY(50%) translateX(-50%);\n  }\n';
-const videoFullAdjustment = 'video{\n  object-position: center !important;\n}\n\n.video div:first-child{\n  padding-top: 0 !important;\n  width: 100%;\n  height: 100% !important;\n}\n\n';
+const videoBarAnimation = '.video{\n  width: 40%;\n  bottom: 0px;\n  transform: translateY(150px) translateX(-50%);\n  .active &{\n    transform: translateY(0) translateX(-50%);\n    transition: .6s;\n  }\n  @media (max-width: 440px) {\n    bottom: 50px;\n    .active & {\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n  .mobile & {\n    bottom: 40px;\n    .active & {\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n}\n\n';
+//const videoBarAdjustment = '\n  width: 40%;\n  bottom: 0px;\n  @media (max-width: 440px){\n    bottom: 50px;\n    transform: translateY(50%) translateX(-50%);\n  }\n';
+//const videoFullAdjustment = 'video{\n  object-position: center !important;\n}\n\n.video div:first-child{\n  padding-top: 0 !important;\n  width: 100%;\n  height: 100% !important;\n}\n\n';
 
 // VARIABLES: GENERAL
 const appContainer = document.querySelector('.app-container');
@@ -1058,11 +1057,12 @@ const generateAnimations = (firstScene) => {
     let resultTextarea = document.querySelector(`.result-css-${firstScene}`);
     let delay = 0.2;
     resultTextarea.value += `\n\n/* === Animations === */\n\n`;
-    if (selectFormat.value == 'CEV') { resultTextarea.value += videoBarAnimationCEV; }
     
     for (let i = 0; i < createdLayout.length; i++) {
         
-        if (createdLayout[i].animation != 'none') {
+        if ((createdLayout[i].name == 'video') && (selectFormat.value == 'CEV')) {
+            resultTextarea.value += videoBarAnimation;
+        } else if (createdLayout[i].animation != 'none') {
             let chosenAnimation = animations.find(x => x.value === createdLayout[i].animation);
             resultTextarea.value += `.${createdLayout[i].name} {\n  `;
             resultTextarea.value += chosenAnimation.from.replaceAll(';', ';\n  ');
@@ -1073,8 +1073,12 @@ const generateAnimations = (firstScene) => {
             resultTextarea.value += `}\n\n`;
             delay += 0.2;
         }
+    
     }
-    if (selectFormat.value == 'CBV') { document.querySelector('.result-css-bar-video').value += videoBarAnimationCBV; }
+    if (selectFormat.value == 'CBV') {
+        document.querySelector('.result-css-bar-video').value += `\n\n/* === Animations === */\n\n`;
+        document.querySelector('.result-css-bar-video').value += videoBarAnimation;
+    }
 }
 
 const findOption = (i, scene, size) => {
@@ -1099,7 +1103,7 @@ const generateCss = (relevantScenes) => {
             if (createdLayout[i].type !== 'video') {
                 resultTextarea.value += `background-image: url({{${createdLayout[i].name}.${createdLayout[i].extension}}});`;
             };
-            if (createdLayout[i].type == 'video' && sceneShortcut === 'bar') { resultTextarea.value += videoBarAdjustment };
+            //if (createdLayout[i].type == 'video' && sceneShortcut === 'bar') { resultTextarea.value += videoBarAdjustment };
             
             // CSS of query size
             resultTextarea.value += `\n  .${size} &{\n    `;
@@ -1111,7 +1115,7 @@ const generateCss = (relevantScenes) => {
             resultTextarea.value += `\n  }\n`;
             resultTextarea.value += `}\n\n`;
 
-            if (createdLayout[i].type == 'video' && sceneShortcut === 'full') { resultTextarea.value += videoFullAdjustment };
+            //if (createdLayout[i].type == 'video' && sceneShortcut === 'full') { resultTextarea.value += videoFullAdjustment };
         }
     }
 }
