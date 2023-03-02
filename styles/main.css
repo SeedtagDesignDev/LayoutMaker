@@ -444,12 +444,14 @@ select {
 [data-type="video"] .layouts-bar-show-mobile .layout-image {
   height: 80%;
   bottom: 10%;
+  transform: translateX(-50%);
 }
 
 [data-type="video"] .layouts-bar-video-desktop .layout-image,
 [data-type="video"] .layouts-bar-show-desktop .layout-image {
   height: 120%;
   bottom: 0%;
+  transform: translateX(-50%);
 }
 
 
@@ -559,12 +561,14 @@ button.generator-generate:hover{
   width: 40%;
   height: 120%;
   bottom: 0;
+  transform: translateX(-50%);
 }
 
 .preview-mobile [data-type="video"] {
   width: 40%;
   height: 80%;
   bottom: 10%;
+  transform: translateX(-50%);
 }
 
 /* .preview-mobile .preview-image[data-type="video"] {
