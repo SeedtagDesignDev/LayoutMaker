@@ -867,11 +867,15 @@ selectFormat.addEventListener('change', () => {
     appContainer.classList.remove('building-CBV');
     appContainer.classList.add(`building-${selectFormat.value}`);
 
-    if((selectFormat.value === 'CED') || (selectFormat.value === 'CID')) {
-        let videoPreviewElement = previewContainer.querySelector('[data-type="video"]');
+    if ((selectFormat.value === 'CED') || (selectFormat.value === 'CID')) {
         let videoGeneratorElement = generatorForm.querySelector('[data-type="video"]');
-        deletePreviewElement(videoPreviewElement);
-        generatorForm.removeChild(videoGeneratorElement);
+        deleteElement(videoGeneratorElement)
+    }
+
+    if ((selectFormat.value === 'CEV') || (selectFormat.value === 'CBV')) {
+        if (!previewContainer.querySelector('[data-type="video"]')) {
+            createNewGeneratorElement('video');
+        }
     }
 
     addViewClasses(scenesPerFormat[selectFormat.value]);
@@ -886,8 +890,7 @@ selectScene.addEventListener('change', () => {
     }
 });
 
-const deleteElement = (button) => {
-    let generatorElement = button.parentElement.parentElement;
+const deleteElement = (generatorElement) => {
     let elementType = generatorElement.dataset.type;
     deletePreviewElement(generatorElement);
     generatorForm.removeChild(generatorElement);
@@ -996,7 +999,7 @@ const createElementConfig = (elementType, parent) => {
     </select>
     <label class="checkbox-label element-config-trackable-label"><input type="checkbox" class="element-config-trackable" ${checkedTrackable}><span></span>Trackable</label>
     <label class="checkbox-label element-config-decoy-label"><input type="checkbox" class="element-config-decoy" ${checkedDecoy}><span></span>Decoy</label>
-    <button class="element-config-delete" onclick="deleteElement(this)">Delete</button>`;
+    <button class="element-config-delete" onclick="deleteElement(this.parentElement.parentElement)">Delete</button>`;
     parent.appendChild(newGeneratorConfig);
 }
 
@@ -1045,7 +1048,7 @@ const generateHtmlDiv = (textarea, name, trackable, layersAmount) => {
 
 const generateHtml = () => {
     let resultTextarea = document.querySelector('.result-html');
-    resultTextarea.value += `<div class="creative-container">\n\n`;
+    resultTextarea.value += `<div id="creative-container">\n\n`;
     resultTextarea.value += `  <div class="${creationName.value.toLowerCase()}-container">\n`;
     let savedDecoy = {};
     
@@ -1083,7 +1086,17 @@ const generateAnimations = (firstScene) => {
             resultTextarea.value += chosenAnimation.from.replaceAll(';', ';\n  ');
             resultTextarea.value += `.active &{\n    `;
             resultTextarea.value += chosenAnimation.to.replaceAll(';', ';\n    ');
-            resultTextarea.value += `transition: 0.6s ${Math.round(delay * 100) / 100}s;\n`;
+
+            if (createdLayout[i].layers > 1) {
+                for (let count = 1; count <= createdLayout[i].layers; count++) {
+                    delay += 0.1;
+                    resultTextarea.value += `&.${createdLayout[i].name}-${count} {  transition: 0.6s ${Math.round(delay * 100) / 100}s; }\n`;
+                    resultTextarea.value += (count < createdLayout[i].layers) ? `    ` : '';
+                }
+            } else {
+                resultTextarea.value += `transition: 0.6s ${Math.round(delay * 100) / 100}s;\n`;
+            }
+
             resultTextarea.value += `  }\n`;
             resultTextarea.value += `}\n\n`;
             delay += 0.2;

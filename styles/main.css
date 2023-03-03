@@ -728,7 +728,9 @@ button.generator-generate:hover{
   display: none;
 }
 
-[data-type="video"] .element-config-trackable-label {
+[data-type="video"] .element-config-delete,
+[data-type="video"] .element-config-trackable-label,
+[data-type="video"] .element-config-layers {
   display: none;
 }
 
