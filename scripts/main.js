@@ -62,6 +62,12 @@ const layouts = {
                     css: 'width: 60%;height: 100%;left: 40%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
                 },
                 {
+                    css: 'width: 100%;height: 50%;left: 0%;bottom: 50%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                },
+                {
+                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                },
+                {
                     css: 'width: 100%;height: 30%;left: 0%;bottom: 70%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
                 },
                 {
@@ -746,8 +752,6 @@ const animations = [
 ];
 
 const videoBarAnimation = '.video{\n  width: 40%;\n  bottom: 0px;\n  transform: translateY(150px) translateX(-50%);\n  .active &{\n    transform: translateY(0) translateX(-50%);\n    transition: .6s;\n  }\n  @media (max-width: 440px) {\n    bottom: 50px;\n    .active & {\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n  .mobile & {\n    bottom: 40px;\n    .active & {\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n}\n\n';
-//const videoBarAdjustment = '\n  width: 40%;\n  bottom: 0px;\n  @media (max-width: 440px){\n    bottom: 50px;\n    transform: translateY(50%) translateX(-50%);\n  }\n';
-//const videoFullAdjustment = 'video{\n  object-position: center !important;\n}\n\n.video div:first-child{\n  padding-top: 0 !important;\n  width: 100%;\n  height: 100% !important;\n}\n\n';
 
 // VARIABLES: GENERAL
 const appContainer = document.querySelector('.app-container');
@@ -863,7 +867,7 @@ selectFormat.addEventListener('change', () => {
     appContainer.classList.remove('building-CBV');
     appContainer.classList.add(`building-${selectFormat.value}`);
 
-    if(selectFormat.value == ('CID' || 'CED')) {
+    if((selectFormat.value === 'CED') || (selectFormat.value === 'CID')) {
         let videoPreviewElement = previewContainer.querySelector('[data-type="video"]');
         let videoGeneratorElement = generatorForm.querySelector('[data-type="video"]');
         deletePreviewElement(videoPreviewElement);
@@ -982,6 +986,7 @@ const createElementConfig = (elementType, parent) => {
     newGeneratorConfig.classList.add('element-config');
     newGeneratorConfig.innerHTML = `
     <input type="text" class="element-config-name" value="${elementType}${inputNameSuffix}">
+    <input type="number" class="element-config-layers" value="1">
     <select class="element-config-extension">
         ${createExtensionSelect(elementType)}
     </select>
@@ -1024,27 +1029,41 @@ const emptyTextareas = () => {
     }
 }
 
+const generateHtmlDiv = (textarea, name, trackable, layersAmount) => {
+    let layerCount = 1;
+    for (let i = 0; i < layersAmount; i++) {
+        let secondClame = (layersAmount == 1) ? '' : ` ${name}-${layerCount}`;
+        let idName = (layersAmount == 1) ? name : `${name}-${layerCount}`;
+        textarea.value += `    <div class="block ${name}${secondClame}`;
+        if (trackable) {
+            textarea.value += `" id="${idName}`;
+        }
+        textarea.value += `"></div>\n`;
+        layerCount++;
+    }
+}
+
 const generateHtml = () => {
     let resultTextarea = document.querySelector('.result-html');
-    resultTextarea.value += `<div id="creative-container">\n\n`;
+    resultTextarea.value += `<div class="creative-container">\n\n`;
     resultTextarea.value += `  <div class="${creationName.value.toLowerCase()}-container">\n`;
-    let savedDecoy;
+    let savedDecoy = {};
     
+    // Run through all layouts (objects) and create main-container's HTML
     for (let i = 0; i < createdLayout.length; i++) {
         if (createdLayout[i].type == 'video') { continue; }
         if (createdLayout[i].decoy) {
-            savedDecoy = createdLayout[i].name;
+            savedDecoy.name = createdLayout[i].name;
+            savedDecoy.layers = createdLayout[i].layers;
             continue;
         }
-        resultTextarea.value += `    <div class="block ${createdLayout[i].name}`;
-        if (createdLayout[i].trackable) {
-            resultTextarea.value += `" id="${createdLayout[i].name}`;
-        }
-        resultTextarea.value += `"></div>\n`;
+        generateHtmlDiv(resultTextarea, createdLayout[i].name, createdLayout[i].trackable, createdLayout[i].layers);
     }
+
+    // Create the rest of the HTML (decoy-container)
     resultTextarea.value += `  </div>\n\n`;
     resultTextarea.value += `  <div class="decoy-container">\n`;
-    resultTextarea.value += `    <div class="block ${savedDecoy}" id="${savedDecoy}">\n`;
+    generateHtmlDiv(resultTextarea, savedDecoy.name, true, savedDecoy.layers);
     resultTextarea.value += `  </div>\n\n`;
     resultTextarea.value += `</div>\n`;
 }
@@ -1062,7 +1081,7 @@ const generateAnimations = (firstScene) => {
             let chosenAnimation = animations.find(x => x.value === createdLayout[i].animation);
             resultTextarea.value += `.${createdLayout[i].name} {\n  `;
             resultTextarea.value += chosenAnimation.from.replaceAll(';', ';\n  ');
-            resultTextarea.value += `.entered &{\n    `;
+            resultTextarea.value += `.active &{\n    `;
             resultTextarea.value += chosenAnimation.to.replaceAll(';', ';\n    ');
             resultTextarea.value += `transition: 0.6s ${Math.round(delay * 100) / 100}s;\n`;
             resultTextarea.value += `  }\n`;
@@ -1099,7 +1118,6 @@ const generateCss = (relevantScenes) => {
             if (createdLayout[i].type !== 'video') {
                 resultTextarea.value += `background-image: url({{${createdLayout[i].name}.${createdLayout[i].extension}}});`;
             };
-            //if (createdLayout[i].type == 'video' && sceneShortcut === 'bar') { resultTextarea.value += videoBarAdjustment };
             
             // CSS of query size
             resultTextarea.value += `\n  .${size} &{\n    `;
@@ -1110,8 +1128,6 @@ const generateCss = (relevantScenes) => {
             };
             resultTextarea.value += `\n  }\n`;
             resultTextarea.value += `}\n\n`;
-
-            //if (createdLayout[i].type == 'video' && sceneShortcut === 'full') { resultTextarea.value += videoFullAdjustment };
         }
     }
 }
@@ -1121,17 +1137,20 @@ const generateLayoutObject = () => {
     createdLayout = [];
     let createdElements = document.querySelectorAll('.generator-element');
     
+    // Creates object for each element
     for ( let i = 0; i < createdElements.length; i++ ) {
         let element = {};
         element.type = createdElements[i].dataset.type;
         element.count = createdElements[i].dataset.count;
         element.name = createdElements[i].querySelector('.element-config-name').value.toLowerCase();
+        element.layers = createdElements[i].querySelector('.element-config-layers').value;
         element.extension = createdElements[i].querySelector('.element-config-extension').value;
         element.animation = createdElements[i].querySelector('.element-config-animation').value;
         element.trackable = createdElements[i].querySelector('.element-config-trackable').checked;
         element.decoy = createdElements[i].querySelector('.element-config-decoy').checked;
         element.layouts = [];
 
+        // Saves each chosen option
         let checkedLayouts = createdElements[i].querySelectorAll('.layout-collection input[type="radio"]');
         for ( let i = 0; i < checkedLayouts.length; i++ ) {
             if (checkedLayouts[i].checked) {
