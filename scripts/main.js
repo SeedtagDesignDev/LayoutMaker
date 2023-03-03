@@ -1,7 +1,3 @@
-/* import { layouts } from 'layouts.js';
-
-console.log(layouts); */
-
 const layouts = {
     bg: {
         full: {
@@ -1030,7 +1026,7 @@ const emptyTextareas = () => {
 
 const generateHtml = () => {
     let resultTextarea = document.querySelector('.result-html');
-    resultTextarea.value += `<div class="creative-container">\n\n`;
+    resultTextarea.value += `<div id="creative-container">\n\n`;
     resultTextarea.value += `  <div class="${creationName.value.toLowerCase()}-container">\n`;
     let savedDecoy;
     
