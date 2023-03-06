@@ -442,7 +442,7 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: var(--main-st-lighter-blue) !important;
 }
 
-[data-type="element"] .layout-image {
+[data-type="copy"] .layout-image {
   background-color: var(--main-st-grey) !important;
 }
 
@@ -592,7 +592,7 @@ button.generator-generate:hover{
   border: 1px solid rgba(221, 76, 69, 0.7) !important;
 }
 
-.preview-image[data-type="element"] {
+.preview-image[data-type="copy"] {
   background-color: rgba(237, 237, 237, 0.3) !important;
   border: 1px solid rgba(237, 237, 237, 0.7) !important;
 }

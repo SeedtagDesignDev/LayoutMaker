@@ -278,7 +278,7 @@ const layouts = {
             ]
         }
     },
-    element: {
+    copy: {
         full: {
             vertical: [
                 {
@@ -297,13 +297,199 @@ const layouts = {
                     css: 'width: 44%;height: 40%;left: 8%;bottom: 20%;background-position: left center;',
                 },
                 {
+                    css: 'width: 44%;height: 40%;left: 32%;bottom: 20%;background-position: center center;',
+                },
+                {
+                    css: 'width: 44%;height: 40%;left: 48%;bottom: 20%;background-position: right center;',
+                },
+                {
                     css: 'width: 44%;height: 40%;left: 8%;bottom: 5%;background-position: left 80%;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 32%;bottom: 20%;background-position: right center;',
+                    css: 'width: 44%;height: 40%;left: 32%;bottom: 5%;background-position: center 80%;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 32%;bottom: 5%;background-position: right 80%;',
+                    css: 'width: 44%;height: 40%;left: 48%;bottom: 5%;background-position: right 80%;',
+                },
+                {
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 70%;background-position: center center;',
+                },
+                {
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 46%;background-position: center center;',
+                },
+                {
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 32%;background-position: center center;',
+                },
+                {
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 20%;background-position: center center;',
+                },
+                {
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 12%;background-position: center center;',
+                },
+                {
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 5%;background-position: center center;',
+                },
+            ],
+            horizontal: [
+                {
+                    css: 'display: none;',
+                },
+                {
+                    css: 'width: 58%;height: 50%;left: 6%;bottom: 23%;background-position: left center;',
+                },
+                {
+                    css: 'width: 70%;height: 50%;left: 15%;bottom: 23%;background-position: center center;',
+                },
+                {
+                    css: 'width: 58%;height: 30%;left: 6%;bottom: 8%;background-position: left center;',
+                },
+                {
+                    css: 'width: 30%;height: 52%;left: 4%;bottom: 22%;background-position: center center;',
+                },
+                {
+                    css: 'width: 30%;height: 52%;left: 66%;bottom: 22%;background-position: center center;',
+                },
+                {
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 62%;background-position: left 20%;',
+                },
+                {
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 42%;background-position: left 20%;',
+                },
+                {
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 22%;background-position: left 20%;',
+                },
+                {
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 8%;background-position: left 20%;',
+                },
+                {
+                    css: 'width: 48%;height: 30%;left: 6%;bottom: 62%;background-position: left 20%;',
+                },
+                {
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 56%;background-position: center 60%;',
+                },
+                {
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 50%;background-position: center 60%;',
+                },
+                {
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 24%;background-position: center 60%;',
+                },
+                {
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 8%;background-position: center 60%;',
+                },
+                
+            ]
+        },
+        bar: {
+            mobile: [
+                {
+                    css: 'display: none;',
+                },
+                {
+                    css: 'width: 40%;height: 60%;left: 2%;bottom: 20%;background-position: center center;',
+                },
+                {
+                    css: 'width: 40%;height: 60%;left: 30%;bottom: 20%;background-position: center center;',
+                },
+                {
+                    css: 'width: 46%;height: 60%;left: 52%;bottom: 20%;background-position: center center;',
+                },
+                {
+                    css: 'width: 64%;height: 38%;left: 2%;bottom: 54%;background-position: left top;',
+                },
+                {
+                    css: 'width: 64%;height: 38%;left: 2%;bottom: 8%;background-position: left bottom;',
+                },
+                {
+                    css: 'width: 44%;height: 38%;left: 28%;bottom: 54%;background-position: center top;',
+                },
+                {
+                    css: 'width: 44%;height: 38%;left: 28%;bottom: 8%;background-position: center top;',
+                },
+                {
+                    css: 'width: 64%;height: 38%;left: 34%;bottom: 54%;background-position: left top;',
+                },
+                {
+                    css: 'width: 64%;height: 38%;left: 34%;bottom: 8%;background-position: left bottom;',
+                },
+            ],
+            desktop: [
+                {
+                    css: 'display: none;',
+                },
+                {
+                    css: 'width: 21%;height: 54%;left: 2%;bottom: 23%;background-position: center center;',
+                },
+                {
+                    css: 'width: 21%;height: 54%;left: 27%;bottom: 23%;background-position: center center;',
+                },
+                {
+                    css: 'width: 21%;height: 54%;left: 52%;bottom: 23%;background-position: center center;',
+                },
+                {
+                    css: 'width: 21%;height: 54%;left: 77%;bottom: 23%;background-position: center center;',
+                },
+                {
+                    css: 'width: 30%;height: 54%;left: 2%;bottom: 23%;background-position: center center;',
+                },
+                {
+                    css: 'width: 30%;height: 54%;left: 35%;bottom: 23%;background-position: center center;',
+                },
+                {
+                    css: 'width: 30%;height: 54%;left: 68%;bottom: 23%;background-position: center center;',
+                },
+                {
+                    css: 'width: 40%;height: 36%;left: 2%;bottom: 54%;background-position: left top;',
+                },
+                {
+                    css: 'width: 40%;height: 36%;left: 2%;bottom: 10%;background-position: left top;',
+                },
+                {
+                    css: 'width: 40%;height: 36%;left: 30%;bottom: 54%;background-position: center top;',
+                },
+                {
+                    css: 'width: 40%;height: 36%;left: 30%;bottom: 10%;background-position: center top;',
+                },
+                {
+                    css: 'width: 40%;height: 36%;left: 58%;bottom: 54%;background-position: center top;',
+                },
+                {
+                    css: 'width: 40%;height: 36%;left: 58%;bottom: 10%;background-position: center top;',
+                },
+            ]
+        }
+    },
+    img: {
+        full: {
+            vertical: [
+                {
+                    css: 'display: none;',
+                },
+                {
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 48%;background-position: center center;',
+                },
+                {
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 38%;background-position: center center;',
+                },
+                {
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 28%;background-position: center center;',
+                },
+                {
+                    css: 'width: 44%;height: 40%;left: 8%;bottom: 20%;background-position: left center;',
+                },
+                {
+                    css: 'width: 44%;height: 40%;left: 32%;bottom: 20%;background-position: center center;',
+                },
+                {
+                    css: 'width: 44%;height: 40%;left: 48%;bottom: 20%;background-position: right center;',
+                },
+                {
+                    css: 'width: 44%;height: 40%;left: 8%;bottom: 5%;background-position: left 80%;',
+                },
+                {
+                    css: 'width: 44%;height: 40%;left: 32%;bottom: 5%;background-position: center 80%;',
+                },
+                {
+                    css: 'width: 44%;height: 40%;left: 48%;bottom: 5%;background-position: right 80%;',
                 },
                 {
                     css: 'width: 84%;height: 16%;left: 8%;bottom: 70%;background-position: center center;',
@@ -391,25 +577,34 @@ const layouts = {
                     css: 'width: 26%;height: 150%;left: 72%;bottom: 0%;background-position: center 80%;',
                 },
                 {
-                    css: 'width: 26%;height: 84%;left: 2%;bottom: 8%;background-position: center center;',
+                    css: 'width: 40%;height: 150%;left: 2%;bottom: 0%;background-position: center 80%;',
                 },
                 {
-                    css: 'width: 64%;height: 38%;left: 2%;bottom: 54%;background-position: left top;',
+                    css: 'width: 40%;height: 150%;left: 30%;bottom: 0%;background-position: center 80%;',
                 },
                 {
-                    css: 'width: 64%;height: 38%;left: 2%;bottom: 8%;background-position: left bottom;',
+                    css: 'width: 46%;height: 150%;left: 52%;bottom: 0%;background-position: center 80%;',
                 },
                 {
-                    css: 'width: 40%;height: 84%;left: 2%;bottom: 8%;background-position: center center;',
+                    css: 'width: 26%;height: 80%;left: 2%;bottom: 10%;background-position: center center;',
                 },
                 {
-                    css: 'width: 40%;height: 84%;left: 30%;bottom: 8%;background-position: center center;',
+                    css: 'width: 26%;height: 80%;left: 30%;bottom: 10%;background-position: center center;',
                 },
                 {
-                    css: 'width: 46%;height: 84%;left: 52%;bottom: 8%;background-position: center center;',
+                    css: 'width: 26%;height: 80%;left: 37%;bottom: 10%;background-position: center center;',
                 },
                 {
-                    css: 'width: 44%;height: 38%;left: 28%;bottom: 8%;background-position: center top;',
+                    css: 'width: 26%;height: 80%;left: 72%;bottom: 10%;background-position: center center;',
+                },
+                {
+                    css: 'width: 40%;height: 80%;left: 2%;bottom: 10%;background-position: center center;',
+                },
+                {
+                    css: 'width: 40%;height: 80%;left: 30%;bottom: 10%;background-position: center center;',
+                },
+                {
+                    css: 'width: 46%;height: 80%;left: 52%;bottom: 10%;background-position: center center;',
                 },
             ],
             desktop: [
@@ -432,6 +627,15 @@ const layouts = {
                     css: 'width: 21%;height: 150%;left: 77%;bottom: 0%;background-position: center 80%;',
                 },
                 {
+                    css: 'width: 30%;height: 150%;left: 2%;bottom: 0%;background-position: center 80%;',
+                },
+                {
+                    css: 'width: 30%;height: 150%;left: 35%;bottom: 0%;background-position: center 80%;',
+                },
+                {
+                    css: 'width: 30%;height: 150%;left: 68%;bottom: 0%;background-position: center 80%;',
+                },
+                {
                     css: 'width: 21%;height: 84%;left: 2%;bottom: 8%;background-position: center center;',
                 },
                 {
@@ -442,12 +646,6 @@ const layouts = {
                 },
                 {
                     css: 'width: 21%;height: 84%;left: 77%;bottom: 8%;background-position: center center;',
-                },
-                {
-                    css: 'width: 40%;height: 30%;left: 2%;bottom: 8%;background-position: left top;',
-                },
-                {
-                    css: 'width: 40%;height: 30%;left: 30%;bottom: 8%;background-position: center top;',
                 },
                 {
                     css: 'width: 30%;height: 84%;left: 2%;bottom: 8%;background-position: center center;',
@@ -795,8 +993,15 @@ let elementSettings = {
         defaultDecoy: false,
         currentAmount: 0
     },
-    element: {
+    copy: {
         defaultExtension: 'svg',
+        defaultAnimation: 'left-to-right',
+        defaultTrackable: true,
+        defaultDecoy: false,
+        currentAmount: 0
+    },
+    img: {
+        defaultExtension: 'png',
         defaultAnimation: 'left-to-right',
         defaultTrackable: true,
         defaultDecoy: false,
@@ -1244,6 +1449,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     createNewGeneratorElement('bg');
     createNewGeneratorElement('video');
     createNewGeneratorElement('logo');
-    createNewGeneratorElement('element');
+    createNewGeneratorElement('copy');
+    createNewGeneratorElement('img');
     createNewGeneratorElement('cta');
 });
