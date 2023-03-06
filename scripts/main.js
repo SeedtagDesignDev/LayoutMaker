@@ -1113,6 +1113,20 @@ const findOption = (i, scene, size) => {
     return createdLayout[i].layouts.find((layout) => (layout.scene === scene && layout.size === size)).option;
 }
 
+const generateCssBackground = (textarea, name, extension, layersAmount, spaces) => {
+    if (layersAmount > 1) {
+        let layerCount = 1;
+        for (let count = 1; count <= layersAmount; count++) {
+            textarea.value += `&.${name}-${count} { background-image: url({{${name}-${count}.${extension}}}); }`;
+            textarea.value += ((count < layersAmount) && (spaces == 2)) ? `\n  ` : '';
+            textarea.value += ((count < layersAmount) && (spaces == 4)) ? `\n    ` : '';
+            layerCount++;
+        }
+    } else {
+        textarea.value += `background-image: url({{${name}.${extension}}});`;
+    }
+}
+
 const generateCss = (relevantScenes) => {
     for (let scene of relevantScenes){
         // On each scene, define textarea and current scene-size
@@ -1129,7 +1143,8 @@ const generateCss = (relevantScenes) => {
             let selectedOption = findOption(i, scene, mainSize);
             resultTextarea.value += (layouts[createdLayout[i].type][sceneShortcut][mainSize][selectedOption]['css']).replaceAll(';', ';\n  ');
             if (createdLayout[i].type !== 'video') {
-                resultTextarea.value += `background-image: url({{${createdLayout[i].name}.${createdLayout[i].extension}}});`;
+                //resultTextarea.value += `background-image: url({{${createdLayout[i].name}.${createdLayout[i].extension}}});`;
+                generateCssBackground(resultTextarea, createdLayout[i].name, createdLayout[i].extension, createdLayout[i].layers, 2)
             };
             
             // CSS of query size
@@ -1137,7 +1152,8 @@ const generateCss = (relevantScenes) => {
             selectedOption = findOption(i, scene, size);
             resultTextarea.value += (layouts[createdLayout[i].type][sceneShortcut][size][selectedOption]['css']).replaceAll(';', ';\n    ');
             if (createdLayout[i].type !== 'video') {
-                resultTextarea.value += `background-image: url({{${createdLayout[i].name}.${createdLayout[i].extension}}});`;
+                //resultTextarea.value += `background-image: url({{${createdLayout[i].name}.${createdLayout[i].extension}}});`;
+                generateCssBackground(resultTextarea, createdLayout[i].name, createdLayout[i].extension, createdLayout[i].layers, 4)
             };
             resultTextarea.value += `\n  }\n`;
             resultTextarea.value += `}\n\n`;
