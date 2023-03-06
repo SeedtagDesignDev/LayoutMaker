@@ -752,6 +752,7 @@ const animations = [
 ];
 
 const videoBarAnimation = '.video{\n  width: 40%;\n  bottom: 0px;\n  transform: translateY(150px) translateX(-50%);\n  .active &{\n    transform: translateY(0) translateX(-50%);\n    transition: .6s;\n  }\n  @media (max-width: 440px) {\n    bottom: 50px;\n    .active & {\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n  .mobile & {\n    bottom: 40px;\n    .active & {\n      transform: translateY(50%) translateX(-50%);\n    }\n  }\n}\n\n';
+const videoFullAdjustment = 'video{\n  object-position: center !important;\n}\n\n.video div:first-child{\n  padding-top: 0 !important;\n  width: 100%;\n  height: 100% !important;\n}\n\n';
 
 // VARIABLES: GENERAL
 const appContainer = document.querySelector('.app-container');
@@ -1157,6 +1158,8 @@ const generateCss = (relevantScenes) => {
             };
             resultTextarea.value += `\n  }\n`;
             resultTextarea.value += `}\n\n`;
+
+            if (createdLayout[i].type == 'video' && sceneShortcut === 'full') { resultTextarea.value += videoFullAdjustment };
         }
     }
 }
