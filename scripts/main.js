@@ -6,34 +6,74 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 60%;left: 0%;bottom: 40%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 60%;left: 0%;bottom: 40%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 50%;left: 0%;bottom: 50%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 50%;left: 0%;bottom: 50%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 40%;left: 0%;bottom: 60%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 40%;left: 0%;bottom: 60%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 30%;left: 0%;bottom: 70%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 30%;left: 0%;bottom: 70%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 60%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 60%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 40%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 40%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 30%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 30%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 94%;height: 96%;left: 3%;bottom: 2%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 94%;height: 96%;left: 3%;bottom: 2%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 }
             ],
             horizontal: [
@@ -41,40 +81,88 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 60%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 60%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 50%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 50%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 40%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 40%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 40%;height: 100%;left: 60%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 40%;height: 100%;left: 60%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 50%;height: 100%;left: 50%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 50%;height: 100%;left: 50%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 60%;height: 100%;left: 40%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 60%;height: 100%;left: 40%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 50%;left: 0%;bottom: 50%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 50%;left: 0%;bottom: 50%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 30%;left: 0%;bottom: 70%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 30%;left: 0%;bottom: 70%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 30%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 30%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 96%;height: 94%;left: 2%;bottom: 3%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 96%;height: 94%;left: 2%;bottom: 3%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 }
                 
             ]
@@ -85,31 +173,67 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;-webkit-mask-image: -webkit-gradient(linear, left 40%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;-webkit-mask-image: -webkit-gradient(linear, left 40%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 110%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;clip-path: ellipse(80% 100% at 50% 100%);',
+                    css: 'width: 100%;height: 110%;left: 0%;bottom: 0%;clip-path: ellipse(80% 100% at 50% 100%);',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;clip-path: polygon(0% 100%, 100% 100%, 100% 10%, 98% 0%, 96% 10%, 94% 0%, 92% 10%, 90% 0%, 88% 10%, 86% 0%, 84% 10%, 82% 0%, 80% 10%, 78% 0%, 76% 10%, 74% 0%, 72% 10%, 70% 0%, 68% 10%, 66% 0%, 64% 10%, 62% 0%, 60% 10%, 58% 0%, 56% 10%, 54% 0%, 52% 10%, 50% 0%, 48% 10%, 46% 0%, 44% 10%, 42% 0%, 40% 10%, 38% 0%, 36% 10%, 34% 0%, 32% 10%, 30% 0%, 28% 10%, 26% 0%, 24% 10%, 22% 0%, 20% 10%, 18% 0%, 16% 10%, 14% 0%, 12% 10%, 10% 0%, 8% 10%, 6% 0%, 4% 10%, 2% 0%, 0% 10%);',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;clip-path: polygon(0% 100%, 100% 100%, 100% 10%, 98% 0%, 96% 10%, 94% 0%, 92% 10%, 90% 0%, 88% 10%, 86% 0%, 84% 10%, 82% 0%, 80% 10%, 78% 0%, 76% 10%, 74% 0%, 72% 10%, 70% 0%, 68% 10%, 66% 0%, 64% 10%, 62% 0%, 60% 10%, 58% 0%, 56% 10%, 54% 0%, 52% 10%, 50% 0%, 48% 10%, 46% 0%, 44% 10%, 42% 0%, 40% 10%, 38% 0%, 36% 10%, 34% 0%, 32% 10%, 30% 0%, 28% 10%, 26% 0%, 24% 10%, 22% 0%, 20% 10%, 18% 0%, 16% 10%, 14% 0%, 12% 10%, 10% 0%, 8% 10%, 6% 0%, 4% 10%, 2% 0%, 0% 10%);',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 50%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 50%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 50%;height: 100%;left: 50%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 50%;height: 100%;left: 50%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 96%;height: 84%;left: 2%;bottom: 8%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 96%;height: 84%;left: 2%;bottom: 8%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
             ],
             desktop: [
@@ -117,31 +241,65 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;-webkit-mask-image: -webkit-gradient(linear, left 40%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;-webkit-mask-image: -webkit-gradient(linear, left 40%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 110%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;clip-path: ellipse(80% 100% at 50% 100%);',
+                    css: 'width: 100%;height: 110%;left: 0%;bottom: 0%;clip-path: ellipse(80% 100% at 50% 100%);',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;clip-path: polygon(0% 100%, 100% 100%, 100% 10%, 98% 0%, 96% 10%, 94% 0%, 92% 10%, 90% 0%, 88% 10%, 86% 0%, 84% 10%, 82% 0%, 80% 10%, 78% 0%, 76% 10%, 74% 0%, 72% 10%, 70% 0%, 68% 10%, 66% 0%, 64% 10%, 62% 0%, 60% 10%, 58% 0%, 56% 10%, 54% 0%, 52% 10%, 50% 0%, 48% 10%, 46% 0%, 44% 10%, 42% 0%, 40% 10%, 38% 0%, 36% 10%, 34% 0%, 32% 10%, 30% 0%, 28% 10%, 26% 0%, 24% 10%, 22% 0%, 20% 10%, 18% 0%, 16% 10%, 14% 0%, 12% 10%, 10% 0%, 8% 10%, 6% 0%, 4% 10%, 2% 0%, 0% 10%);',
+                    css: 'width: 100%;height: 100%;left: 0%;bottom: 0%;clip-path: polygon(0% 100%, 100% 100%, 100% 10%, 98% 0%, 96% 10%, 94% 0%, 92% 10%, 90% 0%, 88% 10%, 86% 0%, 84% 10%, 82% 0%, 80% 10%, 78% 0%, 76% 10%, 74% 0%, 72% 10%, 70% 0%, 68% 10%, 66% 0%, 64% 10%, 62% 0%, 60% 10%, 58% 0%, 56% 10%, 54% 0%, 52% 10%, 50% 0%, 48% 10%, 46% 0%, 44% 10%, 42% 0%, 40% 10%, 38% 0%, 36% 10%, 34% 0%, 32% 10%, 30% 0%, 28% 10%, 26% 0%, 24% 10%, 22% 0%, 20% 10%, 18% 0%, 16% 10%, 14% 0%, 12% 10%, 10% 0%, 8% 10%, 6% 0%, 4% 10%, 2% 0%, 0% 10%);',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 100%;height: 50%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 50%;height: 100%;left: 0%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 50%;height: 100%;left: 0%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 },
                 {
-                    css: 'width: 50%;height: 100%;left: 50%;bottom: 0%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 50%;height: 100%;left: 50%;bottom: 0%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-x': 'center',
                 },
                 {
-                    css: 'width: 96%;height: 84%;left: 2%;bottom: 8%;background-color: transparent;background-size: cover;background-repeat: no-repeat;background-position-x: center;background-position-y: center;',
+                    css: 'width: 96%;height: 84%;left: 2%;bottom: 8%;',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position-y': 'center',
                 },
             ]
         }
@@ -153,43 +311,69 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 8%;bottom: 84%;background-position: left top;',
+                    css: 'width: 36%;height: 10%;left: 8%;bottom: 84%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 16%;bottom: 84%;background-position: center top;',
+                    css: 'width: 36%;height: 10%;left: 16%;bottom: 84%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 32%;bottom: 84%;background-position: center top;',
+                    css: 'width: 36%;height: 10%;left: 32%;bottom: 84%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 48%;bottom: 84%;background-position: center top;',
+                    css: 'width: 36%;height: 10%;left: 48%;bottom: 84%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 56%;bottom: 84%;background-position: right top;',
+                    css: 'width: 36%;height: 10%;left: 56%;bottom: 84%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 32%;bottom: 84%;background-position: center bottom;',
+                    css: 'width: 36%;height: 10%;left: 32%;bottom: 84%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 36%;height: 20%;left: 8%;bottom: 74%;background-position: left top;',
+                    css: 'width: 36%;height: 20%;left: 8%;bottom: 74%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 8%;bottom: 38%;background-position: left top;',
+                    css: 'width: 36%;height: 10%;left: 8%;bottom: 38%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 32%;bottom: 38%;background-position: left top;',
+                    css: 'width: 36%;height: 10%;left: 32%;bottom: 38%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 56%;bottom: 38%;background-position: left top;',
+                    css: 'width: 36%;height: 10%;left: 56%;bottom: 38%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 8%;bottom: 6%;background-position: left top;',
+                    css: 'width: 36%;height: 10%;left: 8%;bottom: 6%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 10%;left: 48%;bottom: 6%;background-position: right bottom;',
+                    css: 'width: 36%;height: 10%;left: 48%;bottom: 6%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 36%;height: 14%;left: 56%;bottom: 0%;background-position: center bottom;',
+                    css: 'width: 36%;height: 14%;left: 56%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 }
             ],
             horizontal: [
@@ -197,28 +381,44 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 24%;height: 16%;left: 6%;bottom: 76%;background-position: left top;',
+                    css: 'width: 24%;height: 16%;left: 6%;bottom: 76%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 24%;height: 16%;left: 10%;bottom: 76%;background-position: center bottom;',
+                    css: 'width: 24%;height: 16%;left: 10%;bottom: 76%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 24%;height: 16%;left: 35%;bottom: 76%;background-position: center top;',
+                    css: 'width: 24%;height: 16%;left: 35%;bottom: 76%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 24%;height: 16%;left: 60%;bottom: 76%;background-position: center bottom;',
+                    css: 'width: 24%;height: 16%;left: 60%;bottom: 76%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 24%;height: 16%;left: 71%;bottom: 76%;background-position: right top;',
+                    css: 'width: 24%;height: 16%;left: 71%;bottom: 76%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 24%;height: 24%;left: 6%;bottom: 68%;background-position: left top;',
+                    css: 'width: 24%;height: 24%;left: 6%;bottom: 68%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 24%;height: 24%;left: 70%;bottom: 0%;background-position: center bottom;',
+                    css: 'width: 24%;height: 24%;left: 70%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 24%;height: 16%;left: 70%;bottom: 6%;background-position: right bottom;',
+                    css: 'width: 24%;height: 16%;left: 70%;bottom: 6%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 },
             ]
         },
@@ -228,25 +428,39 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 2%;bottom: 54%;background-position: left bottom;',
+                    css: 'width: 26%;height: 38%;left: 2%;bottom: 54%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 2%;bottom: 31%;background-position: center center;',
+                    css: 'width: 26%;height: 38%;left: 2%;bottom: 31%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 2%;bottom: 8%;background-position: left top;',
+                    css: 'width: 26%;height: 38%;left: 2%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 26%;height: 80%;left: 2%;bottom: 10%;background-position: center center;',
+                    css: 'width: 26%;height: 80%;left: 2%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 72%;bottom: 54%;background-position: right bottom;',
+                    css: 'width: 26%;height: 38%;left: 72%;bottom: 54%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 72%;bottom: 31%;background-position: center center;',
+                    css: 'width: 26%;height: 38%;left: 72%;bottom: 31%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 72%;bottom: 8%;background-position: right top;',
+                    css: 'width: 26%;height: 38%;left: 72%;bottom: 8%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'top;',
                 },
             ],
             desktop: [
@@ -254,25 +468,39 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 20%;height: 42%;left: 2%;bottom: 50%;background-position: left bottom;',
+                    css: 'width: 20%;height: 42%;left: 2%;bottom: 50%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 20%;height: 42%;left: 2%;bottom: 29%;background-position: center center;',
+                    css: 'width: 20%;height: 42%;left: 2%;bottom: 29%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 20%;height: 42%;left: 2%;bottom: 8%;background-position: left top;',
+                    css: 'width: 20%;height: 42%;left: 2%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 20%;height: 80%;left: 2%;bottom: 10%;background-position: center center;',
+                    css: 'width: 20%;height: 80%;left: 2%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 20%;height: 42%;left: 78%;bottom: 50%;background-position: right bottom;',
+                    css: 'width: 20%;height: 42%;left: 78%;bottom: 50%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 20%;height: 42%;left: 78%;bottom: 29%;background-position: center center;',
+                    css: 'width: 20%;height: 42%;left: 78%;bottom: 29%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 20%;height: 42%;left: 78%;bottom: 8%;background-position: right top;',
+                    css: 'width: 20%;height: 42%;left: 78%;bottom: 8%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'top;',
                 },
                 
             ]
@@ -285,49 +513,79 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 84%;height: 40%;left: 8%;bottom: 48%;background-position: center center;',
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 48%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 40%;left: 8%;bottom: 38%;background-position: center center;',
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 38%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 40%;left: 8%;bottom: 28%;background-position: center center;',
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 28%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 8%;bottom: 20%;background-position: left center;',
+                    css: 'width: 44%;height: 40%;left: 8%;bottom: 20%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 32%;bottom: 20%;background-position: center center;',
+                    css: 'width: 44%;height: 40%;left: 32%;bottom: 20%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 48%;bottom: 20%;background-position: right center;',
+                    css: 'width: 44%;height: 40%;left: 48%;bottom: 20%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 8%;bottom: 5%;background-position: left 80%;',
+                    css: 'width: 44%;height: 40%;left: 8%;bottom: 5%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 32%;bottom: 5%;background-position: center 80%;',
+                    css: 'width: 44%;height: 40%;left: 32%;bottom: 5%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 48%;bottom: 5%;background-position: right 80%;',
+                    css: 'width: 44%;height: 40%;left: 48%;bottom: 5%;',
+                    'background-position-x': 'right',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 70%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 70%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 46%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 46%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 32%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 32%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 20%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 20%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 12%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 12%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 5%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 5%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
             ],
             horizontal: [
@@ -335,46 +593,74 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 58%;height: 50%;left: 6%;bottom: 23%;background-position: left center;',
+                    css: 'width: 58%;height: 50%;left: 6%;bottom: 23%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 70%;height: 50%;left: 15%;bottom: 23%;background-position: center center;',
+                    css: 'width: 70%;height: 50%;left: 15%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 58%;height: 30%;left: 6%;bottom: 8%;background-position: left center;',
+                    css: 'width: 58%;height: 30%;left: 6%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 52%;left: 4%;bottom: 22%;background-position: center center;',
+                    css: 'width: 30%;height: 52%;left: 4%;bottom: 22%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 52%;left: 66%;bottom: 22%;background-position: center center;',
+                    css: 'width: 30%;height: 52%;left: 66%;bottom: 22%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 38%;height: 30%;left: 6%;bottom: 62%;background-position: left 20%;',
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 62%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 38%;height: 30%;left: 6%;bottom: 42%;background-position: left 20%;',
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 42%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 38%;height: 30%;left: 6%;bottom: 22%;background-position: left 20%;',
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 22%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 38%;height: 30%;left: 6%;bottom: 8%;background-position: left 20%;',
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 48%;height: 30%;left: 6%;bottom: 62%;background-position: left 20%;',
+                    css: 'width: 48%;height: 30%;left: 6%;bottom: 62%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 50%;height: 30%;left: 25%;bottom: 56%;background-position: center 60%;',
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 56%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '60%;',
                 },
                 {
-                    css: 'width: 50%;height: 30%;left: 25%;bottom: 50%;background-position: center 60%;',
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 50%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '60%;',
                 },
                 {
-                    css: 'width: 50%;height: 30%;left: 25%;bottom: 24%;background-position: center 60%;',
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 24%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '60%;',
                 },
                 {
-                    css: 'width: 50%;height: 30%;left: 25%;bottom: 8%;background-position: center 60%;',
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '60%;',
                 },
                 
             ]
@@ -385,31 +671,49 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 40%;height: 60%;left: 2%;bottom: 20%;background-position: center center;',
+                    css: 'width: 40%;height: 60%;left: 2%;bottom: 20%;',
+                    'background-position-x': 'center',
+                    'background-postion-y': 'center;',
                 },
                 {
-                    css: 'width: 40%;height: 60%;left: 30%;bottom: 20%;background-position: center center;',
+                    css: 'width: 40%;height: 60%;left: 30%;bottom: 20%;',
+                    'background-position-x': 'center',
+                    'background-postion-y': 'center;',
                 },
                 {
-                    css: 'width: 46%;height: 60%;left: 52%;bottom: 20%;background-position: center center;',
+                    css: 'width: 46%;height: 60%;left: 52%;bottom: 20%;',
+                    'background-position-x': 'center',
+                    'background-postion-y': 'center;',
                 },
                 {
-                    css: 'width: 64%;height: 38%;left: 2%;bottom: 54%;background-position: left top;',
+                    css: 'width: 64%;height: 38%;left: 2%;bottom: 54%;',
+                    'background-position-x': 'left',
+                    'background-postion-y': 'top;',
                 },
                 {
-                    css: 'width: 64%;height: 38%;left: 2%;bottom: 8%;background-position: left bottom;',
+                    css: 'width: 64%;height: 38%;left: 2%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-postion-y': 'bottom;',
                 },
                 {
-                    css: 'width: 44%;height: 38%;left: 28%;bottom: 54%;background-position: center top;',
+                    css: 'width: 44%;height: 38%;left: 28%;bottom: 54%;',
+                    'background-position-x': 'center',
+                    'background-postion-y': 'top;',
                 },
                 {
-                    css: 'width: 44%;height: 38%;left: 28%;bottom: 8%;background-position: center top;',
+                    css: 'width: 44%;height: 38%;left: 28%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-postion-y': 'top;',
                 },
                 {
-                    css: 'width: 64%;height: 38%;left: 34%;bottom: 54%;background-position: left top;',
+                    css: 'width: 64%;height: 38%;left: 34%;bottom: 54%;',
+                    'background-position-x': 'left',
+                    'background-postion-y': 'top;',
                 },
                 {
-                    css: 'width: 64%;height: 38%;left: 34%;bottom: 8%;background-position: left bottom;',
+                    css: 'width: 64%;height: 38%;left: 34%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-postion-y': 'bottom;',
                 },
             ],
             desktop: [
@@ -417,43 +721,69 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 21%;height: 54%;left: 2%;bottom: 23%;background-position: center center;',
+                    css: 'width: 21%;height: 54%;left: 2%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 21%;height: 54%;left: 27%;bottom: 23%;background-position: center center;',
+                    css: 'width: 21%;height: 54%;left: 27%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 21%;height: 54%;left: 52%;bottom: 23%;background-position: center center;',
+                    css: 'width: 21%;height: 54%;left: 52%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 21%;height: 54%;left: 77%;bottom: 23%;background-position: center center;',
+                    css: 'width: 21%;height: 54%;left: 77%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 54%;left: 2%;bottom: 23%;background-position: center center;',
+                    css: 'width: 30%;height: 54%;left: 2%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 54%;left: 35%;bottom: 23%;background-position: center center;',
+                    css: 'width: 30%;height: 54%;left: 35%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 54%;left: 68%;bottom: 23%;background-position: center center;',
+                    css: 'width: 30%;height: 54%;left: 68%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 40%;height: 36%;left: 2%;bottom: 54%;background-position: left top;',
+                    css: 'width: 40%;height: 36%;left: 2%;bottom: 54%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 40%;height: 36%;left: 2%;bottom: 10%;background-position: left top;',
+                    css: 'width: 40%;height: 36%;left: 2%;bottom: 10%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 40%;height: 36%;left: 30%;bottom: 54%;background-position: center top;',
+                    css: 'width: 40%;height: 36%;left: 30%;bottom: 54%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 40%;height: 36%;left: 30%;bottom: 10%;background-position: center top;',
+                    css: 'width: 40%;height: 36%;left: 30%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 40%;height: 36%;left: 58%;bottom: 54%;background-position: center top;',
+                    css: 'width: 40%;height: 36%;left: 58%;bottom: 54%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 40%;height: 36%;left: 58%;bottom: 10%;background-position: center top;',
+                    css: 'width: 40%;height: 36%;left: 58%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
             ]
         }
@@ -465,49 +795,79 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 84%;height: 40%;left: 8%;bottom: 48%;background-position: center center;',
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 48%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 40%;left: 8%;bottom: 38%;background-position: center center;',
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 38%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 40%;left: 8%;bottom: 28%;background-position: center center;',
+                    css: 'width: 84%;height: 40%;left: 8%;bottom: 28%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 8%;bottom: 20%;background-position: left center;',
+                    css: 'width: 44%;height: 40%;left: 8%;bottom: 20%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 32%;bottom: 20%;background-position: center center;',
+                    css: 'width: 44%;height: 40%;left: 32%;bottom: 20%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 48%;bottom: 20%;background-position: right center;',
+                    css: 'width: 44%;height: 40%;left: 48%;bottom: 20%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 8%;bottom: 5%;background-position: left 80%;',
+                    css: 'width: 44%;height: 40%;left: 8%;bottom: 5%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 32%;bottom: 5%;background-position: center 80%;',
+                    css: 'width: 44%;height: 40%;left: 32%;bottom: 5%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 44%;height: 40%;left: 48%;bottom: 5%;background-position: right 80%;',
+                    css: 'width: 44%;height: 40%;left: 48%;bottom: 5%;',
+                    'background-position-x': 'right',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 70%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 70%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 46%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 46%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 32%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 32%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 20%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 20%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 12%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 12%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 84%;height: 16%;left: 8%;bottom: 5%;background-position: center center;',
+                    css: 'width: 84%;height: 16%;left: 8%;bottom: 5%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
             ],
             horizontal: [
@@ -515,46 +875,74 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 58%;height: 50%;left: 6%;bottom: 23%;background-position: left center;',
+                    css: 'width: 58%;height: 50%;left: 6%;bottom: 23%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 70%;height: 50%;left: 15%;bottom: 23%;background-position: center center;',
+                    css: 'width: 70%;height: 50%;left: 15%;bottom: 23%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 58%;height: 30%;left: 6%;bottom: 8%;background-position: left center;',
+                    css: 'width: 58%;height: 30%;left: 6%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 52%;left: 4%;bottom: 22%;background-position: center center;',
+                    css: 'width: 30%;height: 52%;left: 4%;bottom: 22%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 52%;left: 66%;bottom: 22%;background-position: center center;',
+                    css: 'width: 30%;height: 52%;left: 66%;bottom: 22%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 38%;height: 30%;left: 6%;bottom: 62%;background-position: left 20%;',
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 62%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 38%;height: 30%;left: 6%;bottom: 42%;background-position: left 20%;',
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 42%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 38%;height: 30%;left: 6%;bottom: 22%;background-position: left 20%;',
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 22%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 38%;height: 30%;left: 6%;bottom: 8%;background-position: left 20%;',
+                    css: 'width: 38%;height: 30%;left: 6%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 48%;height: 30%;left: 6%;bottom: 62%;background-position: left 20%;',
+                    css: 'width: 48%;height: 30%;left: 6%;bottom: 62%;',
+                    'background-position-x': 'left',
+                    'background-position-y': '20%;',
                 },
                 {
-                    css: 'width: 50%;height: 30%;left: 25%;bottom: 56%;background-position: center 60%;',
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 56%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '60%;',
                 },
                 {
-                    css: 'width: 50%;height: 30%;left: 25%;bottom: 50%;background-position: center 60%;',
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 50%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '60%;',
                 },
                 {
-                    css: 'width: 50%;height: 30%;left: 25%;bottom: 24%;background-position: center 60%;',
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 24%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '60%;',
                 },
                 {
-                    css: 'width: 50%;height: 30%;left: 25%;bottom: 8%;background-position: center 60%;',
+                    css: 'width: 50%;height: 30%;left: 25%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '60%;',
                 },
                 
             ]
@@ -565,46 +953,74 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 26%;height: 150%;left: 2%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 26%;height: 150%;left: 2%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 26%;height: 150%;left: 30%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 26%;height: 150%;left: 30%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 26%;height: 150%;left: 37%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 26%;height: 150%;left: 37%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 26%;height: 150%;left: 72%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 26%;height: 150%;left: 72%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 40%;height: 150%;left: 2%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 40%;height: 150%;left: 2%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 40%;height: 150%;left: 30%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 40%;height: 150%;left: 30%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 46%;height: 150%;left: 52%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 46%;height: 150%;left: 52%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 26%;height: 80%;left: 2%;bottom: 10%;background-position: center center;',
+                    css: 'width: 26%;height: 80%;left: 2%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 26%;height: 80%;left: 30%;bottom: 10%;background-position: center center;',
+                    css: 'width: 26%;height: 80%;left: 30%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 26%;height: 80%;left: 37%;bottom: 10%;background-position: center center;',
+                    css: 'width: 26%;height: 80%;left: 37%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 26%;height: 80%;left: 72%;bottom: 10%;background-position: center center;',
+                    css: 'width: 26%;height: 80%;left: 72%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 40%;height: 80%;left: 2%;bottom: 10%;background-position: center center;',
+                    css: 'width: 40%;height: 80%;left: 2%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 40%;height: 80%;left: 30%;bottom: 10%;background-position: center center;',
+                    css: 'width: 40%;height: 80%;left: 30%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 46%;height: 80%;left: 52%;bottom: 10%;background-position: center center;',
+                    css: 'width: 46%;height: 80%;left: 52%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
             ],
             desktop: [
@@ -612,49 +1028,79 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 21%;height: 150%;left: 2%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 21%;height: 150%;left: 2%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 21%;height: 150%;left: 27%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 21%;height: 150%;left: 27%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 20%;height: 150%;left: 40%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 20%;height: 150%;left: 40%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 21%;height: 150%;left: 52%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 21%;height: 150%;left: 52%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 21%;height: 150%;left: 77%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 21%;height: 150%;left: 77%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 30%;height: 150%;left: 2%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 30%;height: 150%;left: 2%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 30%;height: 150%;left: 35%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 30%;height: 150%;left: 35%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 30%;height: 150%;left: 68%;bottom: 0%;background-position: center 80%;',
+                    css: 'width: 30%;height: 150%;left: 68%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': '80%;',
                 },
                 {
-                    css: 'width: 21%;height: 84%;left: 2%;bottom: 8%;background-position: center center;',
+                    css: 'width: 21%;height: 84%;left: 2%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 21%;height: 84%;left: 27%;bottom: 8%;background-position: center center;',
+                    css: 'width: 21%;height: 84%;left: 27%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 21%;height: 84%;left: 52%;bottom: 8%;background-position: center center;',
+                    css: 'width: 21%;height: 84%;left: 52%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 21%;height: 84%;left: 77%;bottom: 8%;background-position: center center;',
+                    css: 'width: 21%;height: 84%;left: 77%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 84%;left: 2%;bottom: 8%;background-position: center center;',
+                    css: 'width: 30%;height: 84%;left: 2%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 84%;left: 35%;bottom: 8%;background-position: center center;',
+                    css: 'width: 30%;height: 84%;left: 35%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 30%;height: 84%;left: 68%;bottom: 8%;background-position: center center;',
+                    css: 'width: 30%;height: 84%;left: 68%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
             ]
         }
@@ -666,13 +1112,19 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 36%;height: 6%;left: 8%;bottom: 8%;background-position: left top;',
+                    css: 'width: 36%;height: 6%;left: 8%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 36%;height: 6%;left: 32%;bottom: 8%;background-position: center center;',
+                    css: 'width: 36%;height: 6%;left: 32%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 36%;height: 6%;left: 58%;bottom: 8%;background-position: left bottom;',
+                    css: 'width: 36%;height: 6%;left: 58%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'bottom;',
                 }
             ],
             horizontal: [
@@ -680,19 +1132,29 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 26%;height: 10%;left: 6%;bottom: 10%;background-position: left top;',
+                    css: 'width: 26%;height: 10%;left: 6%;bottom: 10%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 24%;height: 10%;left: 10%;bottom: 10%;background-position: center top;',
+                    css: 'width: 24%;height: 10%;left: 10%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 26%;height: 10%;left: 40%;bottom: 10%;background-position: left top;',
+                    css: 'width: 26%;height: 10%;left: 40%;bottom: 10%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 24%;height: 10%;left: 60%;bottom: 10%;background-position: center top;',
+                    css: 'width: 24%;height: 10%;left: 60%;bottom: 10%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 26%;height: 10%;left: 68%;bottom: 10%;background-position: left top;',
+                    css: 'width: 26%;height: 10%;left: 68%;bottom: 10%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 }
                 
             ]
@@ -703,25 +1165,39 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 2%;bottom: 54%;background-position: left bottom;',
+                    css: 'width: 26%;height: 38%;left: 2%;bottom: 54%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 2%;bottom: 31%;background-position: center center;',
+                    css: 'width: 26%;height: 38%;left: 2%;bottom: 31%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 2%;bottom: 8%;background-position: left top;',
+                    css: 'width: 26%;height: 38%;left: 2%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 37%;bottom: 8%;background-position: center bottom;',
+                    css: 'width: 26%;height: 38%;left: 37%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 72%;bottom: 54%;background-position: right bottom;',
+                    css: 'width: 26%;height: 38%;left: 72%;bottom: 54%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 72%;bottom: 31%;background-position: center center;',
+                    css: 'width: 26%;height: 38%;left: 72%;bottom: 31%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 26%;height: 38%;left: 72%;bottom: 8%;background-position: right top;',
+                    css: 'width: 26%;height: 38%;left: 72%;bottom: 8%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'top;',
                 },
             ],
             desktop: [
@@ -729,25 +1205,39 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 20%;height: 30%;left: 2%;bottom: 62%;background-position: left bottom;',
+                    css: 'width: 20%;height: 30%;left: 2%;bottom: 62%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 20%;height: 30%;left: 2%;bottom: 35%;background-position: center center;',
+                    css: 'width: 20%;height: 30%;left: 2%;bottom: 35%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 20%;height: 30%;left: 2%;bottom: 8%;background-position: left top;',
+                    css: 'width: 20%;height: 30%;left: 2%;bottom: 8%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'top;',
                 },
                 {
-                    css: 'width: 20%;height: 30%;left: 40%;bottom: 8%;background-position: center bottom;',
+                    css: 'width: 20%;height: 30%;left: 40%;bottom: 8%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 20%;height: 30%;left: 78%;bottom: 62%;background-position: right bottom;',
+                    css: 'width: 20%;height: 30%;left: 78%;bottom: 62%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 20%;height: 30%;left: 78%;bottom: 35%;background-position: center center;',
+                    css: 'width: 20%;height: 30%;left: 78%;bottom: 35%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 20%;height: 30%;left: 78%;bottom: 8%;background-position: right top;',
+                    css: 'width: 20%;height: 30%;left: 78%;bottom: 8%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'top;',
                 },
                 
             ]
@@ -836,13 +1326,19 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 96%;height: 3%;left: 2%;bottom: 1%;background-position: center bottom;',
+                    css: 'width: 96%;height: 3%;left: 2%;bottom: 1%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 100%;height: 10%;left: 0%;bottom: 0%;background-position: center center;',
+                    css: 'width: 100%;height: 10%;left: 0%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 94%;height: 6%;left: 3%;bottom: 2%;background-position: center bottom;',
+                    css: 'width: 94%;height: 6%;left: 3%;bottom: 2%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
             ],
             horizontal: [
@@ -850,16 +1346,24 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 98%;height: 4%;left: 1%;bottom: 1%;background-position: center bottom;',
+                    css: 'width: 98%;height: 4%;left: 1%;bottom: 1%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 100%;height: 14%;left: 0%;bottom: 0%;background-position: center center;',
+                    css: 'width: 100%;height: 14%;left: 0%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center;',
                 },
                 {
-                    css: 'width: 48%;height: 10%;left: 1%;bottom: 1%;background-position: left bottom;',
+                    css: 'width: 48%;height: 10%;left: 1%;bottom: 1%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 48%;height: 10%;left: 51%;bottom: 1%;background-position: right bottom;',
+                    css: 'width: 48%;height: 10%;left: 51%;bottom: 1%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 }
                 
             ]
@@ -870,16 +1374,24 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 96%;height:10%;left: 2%;bottom: 0%;background-position: center bottom;',
+                    css: 'width: 96%;height:10%;left: 2%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 60%;height:10%;left: 3%;bottom: 0%;background-position: left bottom;',
+                    css: 'width: 60%;height:10%;left: 3%;bottom: 0%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 60%;height:10%;left: 37%;bottom: 0%;background-position: right bottom;',
+                    css: 'width: 60%;height:10%;left: 37%;bottom: 0%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 100%;height:24%;left: 0%;bottom: 0%;background-position: center center',
+                    css: 'width: 100%;height:24%;left: 0%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 }
             ],
             desktop: [
@@ -887,16 +1399,24 @@ const layouts = {
                     css: 'display: none;',
                 },
                 {
-                    css: 'width: 98%;height:10%;left: 1%;bottom: 0%;background-position: center bottom;',
+                    css: 'width: 98%;height:10%;left: 1%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 48%;height:10%;left: 1%;bottom: 0%;background-position: left bottom;',
+                    css: 'width: 48%;height:10%;left: 1%;bottom: 0%;',
+                    'background-position-x': 'left',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 48%;height:10%;left: 51%;bottom: 0%;background-position: right bottom;',
+                    css: 'width: 48%;height:10%;left: 51%;bottom: 0%;',
+                    'background-position-x': 'right',
+                    'background-position-y': 'bottom;',
                 },
                 {
-                    css: 'width: 100%;height:24%;left: 0%;bottom: 0%;background-position: center center',
+                    css: 'width: 100%;height:24%;left: 0%;bottom: 0%;',
+                    'background-position-x': 'center',
+                    'background-position-y': 'center',
                 }
                 
             ]
@@ -975,6 +1495,7 @@ let elementSettings = {
     bg: {
         defaultExtension: 'jpg',
         defaultAnimation: 'none',
+        defaultAsset: true,
         defaultTrackable: false,
         defaultDecoy: false,
         currentAmount: 0
@@ -982,6 +1503,7 @@ let elementSettings = {
     logo: {
         defaultExtension: 'svg',
         defaultAnimation: 'left-to-right',
+        defaultAsset: true,
         defaultTrackable: true,
         defaultDecoy: true,
         currentAmount: 0
@@ -989,6 +1511,7 @@ let elementSettings = {
     video: {
         defaultExtension: 'jpg',
         defaultAnimation: 'fade-in',
+        defaultAsset: false,
         defaultTrackable: false,
         defaultDecoy: false,
         currentAmount: 0
@@ -996,6 +1519,7 @@ let elementSettings = {
     copy: {
         defaultExtension: 'svg',
         defaultAnimation: 'left-to-right',
+        defaultAsset: true,
         defaultTrackable: true,
         defaultDecoy: false,
         currentAmount: 0
@@ -1003,6 +1527,7 @@ let elementSettings = {
     img: {
         defaultExtension: 'png',
         defaultAnimation: 'left-to-right',
+        defaultAsset: true,
         defaultTrackable: true,
         defaultDecoy: false,
         currentAmount: 0
@@ -1010,6 +1535,7 @@ let elementSettings = {
     cta: {
         defaultExtension: 'svg',
         defaultAnimation: 'left-to-right',
+        defaultAsset: true,
         defaultTrackable: true,
         defaultDecoy: false,
         currentAmount: 0
@@ -1187,6 +1713,7 @@ const createAnimationSelect = (elementType) => {
 }
 
 const createElementConfig = (elementType, parent) => {
+    let checkedAsset = (elementSettings[elementType].defaultAsset) ? 'checked' : '';
     let checkedDecoy = (elementSettings[elementType].defaultDecoy) ? 'checked' : '';
     let checkedTrackable = (elementSettings[elementType].defaultTrackable) ? 'checked' : '';
     let inputNameSuffix = (elementSettings[elementType].currentAmount > 1) ? `-${elementSettings[elementType].currentAmount}` : '';
@@ -1199,6 +1726,8 @@ const createElementConfig = (elementType, parent) => {
     <select class="element-config-extension">
         ${createExtensionSelect(elementType)}
     </select>
+    <toolcool-color-picker color="#rgba(0,0,0,0)" class="element-config-color"></toolcool-color-picker>
+    <label class="checkbox-label element-config-background-label"><input type="checkbox" class="element-config-background" ${checkedAsset}><span></span>Asset</label>
     <select class="element-config-animation">
         <option value="none" selected>No animation</option>
         ${createAnimationSelect(elementType)}
@@ -1319,17 +1848,47 @@ const findOption = (i, scene, size) => {
     return createdLayout[i].layouts.find((layout) => (layout.scene === scene && layout.size === size)).option;
 }
 
-const generateCssBackground = (textarea, name, extension, layersAmount, spaces) => {
-    if (layersAmount > 1) {
+const setBreakAndIndentation = (textarea, lastLine, spaces) => {
+    textarea.value += ((!lastLine) && (spaces == 2)) ? `\n  ` : '';
+    textarea.value += ((!lastLine) && (spaces == 4)) ? `\n    ` : '';
+}
+
+const generateCssBackground = (textarea, createdLayout, foundLayout, spaces) => {
+    let lastLine = false;
+
+    // Set Background-image
+    if (createdLayout.layers > 1) {
         let layerCount = 1;
-        for (let count = 1; count <= layersAmount; count++) {
-            textarea.value += `&.${name}-${count} { background-image: url({{${name}-${count}.${extension}}}); }`;
-            textarea.value += ((count < layersAmount) && (spaces == 2)) ? `\n  ` : '';
-            textarea.value += ((count < layersAmount) && (spaces == 4)) ? `\n    ` : '';
+        for (let count = 1; count <= createdLayout.layers; count++) {
+            textarea.value += `&.${createdLayout.name}-${count} { background-image: url({{${createdLayout.name}-${count}.${createdLayout.extension}}}); }`;
+            lastLine = (count == createdLayout.layers) ? true : false;
+            setBreakAndIndentation (textarea, lastLine, spaces);
             layerCount++;
         }
     } else {
-        textarea.value += `background-image: url({{${name}.${extension}}});`;
+        textarea.value += `background-image: url({{${createdLayout.name}.${createdLayout.extension}}});`;
+    }
+    
+    // Set Background settings
+    if (foundLayout['background-size']) {
+        lastLine = false;
+        setBreakAndIndentation (textarea, lastLine, spaces);
+        textarea.value += `background-size: ${foundLayout['background-size']};`;
+    }
+    if (foundLayout['background-repeat']) {
+        lastLine = false;
+        setBreakAndIndentation (textarea, lastLine, spaces);
+        textarea.value += `background-repeat: ${foundLayout['background-repeat']};`;
+    }
+    if (foundLayout['background-position-x']) {
+        lastLine = false;
+        setBreakAndIndentation (textarea, lastLine, spaces);
+        textarea.value += `background-position-x: ${foundLayout['background-position-x']};`;
+    }
+    if (foundLayout['background-position-y']) {
+        lastLine = false;
+        setBreakAndIndentation (textarea, lastLine, spaces);
+        textarea.value += `background-position-y: ${foundLayout['background-position-y']}`;
     }
 }
 
@@ -1347,19 +1906,21 @@ const generateCss = (relevantScenes) => {
 
             // CSS of main size
             let selectedOption = findOption(i, scene, mainSize);
-            resultTextarea.value += (layouts[createdLayout[i].type][sceneShortcut][mainSize][selectedOption]['css']).replaceAll(';', ';\n  ');
-            if (createdLayout[i].type !== 'video') {
-                //resultTextarea.value += `background-image: url({{${createdLayout[i].name}.${createdLayout[i].extension}}});`;
-                generateCssBackground(resultTextarea, createdLayout[i].name, createdLayout[i].extension, createdLayout[i].layers, 2)
+            let foundLayout = layouts[createdLayout[i].type][sceneShortcut][mainSize][selectedOption];
+            resultTextarea.value += foundLayout['css'].replaceAll(';', ';\n  ');
+            if (createdLayout[i].type == 'bg') {
+                resultTextarea.value += `background-color: ${createdLayout[i].color};\n  `;
+            };
+            if (createdLayout[i].asset == true) {
+                generateCssBackground(resultTextarea, createdLayout[i], foundLayout, 2);
             };
             
             // CSS of query size
             resultTextarea.value += `\n  .${size} &{\n    `;
             selectedOption = findOption(i, scene, size);
-            resultTextarea.value += (layouts[createdLayout[i].type][sceneShortcut][size][selectedOption]['css']).replaceAll(';', ';\n    ');
-            if (createdLayout[i].type !== 'video') {
-                //resultTextarea.value += `background-image: url({{${createdLayout[i].name}.${createdLayout[i].extension}}});`;
-                generateCssBackground(resultTextarea, createdLayout[i].name, createdLayout[i].extension, createdLayout[i].layers, 4)
+            resultTextarea.value += foundLayout['css'].replaceAll(';', ';\n    ');
+            if (createdLayout[i].asset == true) {
+                generateCssBackground(resultTextarea, createdLayout[i], foundLayout, 4);
             };
             resultTextarea.value += `\n  }\n`;
             resultTextarea.value += `}\n\n`;
@@ -1381,6 +1942,8 @@ const generateLayoutObject = () => {
         element.count = createdElements[i].dataset.count;
         element.name = createdElements[i].querySelector('.element-config-name').value.toLowerCase();
         element.layers = createdElements[i].querySelector('.element-config-layers').value;
+        element.color = createdElements[i].querySelector('.element-config-color').color;
+        element.asset = createdElements[i].querySelector('.element-config-background').checked;
         element.extension = createdElements[i].querySelector('.element-config-extension').value;
         element.animation = createdElements[i].querySelector('.element-config-animation').value;
         element.trackable = createdElements[i].querySelector('.element-config-trackable').checked;

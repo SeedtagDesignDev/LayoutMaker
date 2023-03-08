@@ -16,6 +16,21 @@
   --main-st-red: #dd4c45;
   --main-st-orange: #e88863;
   --main-st-yellow: #eebf45;
+
+  /* Color picker button */
+  --tool-cool-color-picker-btn-bg: #2a3651;
+  --tool-cool-color-picker-btn-border-color: transparent;
+  --tool-cool-color-picker-btn-border-color-inner: #455c90;
+  --tool-cool-color-picker-btn-border-radius: 1rem;
+  --tool-cool-color-picker-btn-border-radius-inner: 1rem;
+
+  /* Color picket popup */
+  --tool-cool-color-picker-popup-bg: #455c90;
+  --tool-cool-color-picker-popup-border-color: transparent;
+
+  /* Color picket fields */
+  --tool-cool-color-picker-field-border-color: transparent;
+  --tool-cool-color-picker-field-label-color: #ededed;
 }
 
 body {
@@ -725,6 +740,21 @@ button.generator-generate:hover{
 [data-type="cta"] .element-config-decoy-label,
 [data-type="legal"] .element-config-decoy-label,
 [data-type="video"] .element-config-decoy-label{
+  display: none;
+}
+
+[data-type="cta"] .element-config-background-label,
+[data-type="copy"] .element-config-background-label,
+[data-type="img"] .element-config-background-label,
+[data-type="legal"] .element-config-background-label,
+[data-type="logo"] .element-config-background-label,
+[data-type="video"] .element-config-background-label,
+[data-type="cta"] .element-config-color,
+[data-type="copy"] .element-config-color,
+[data-type="img"] .element-config-color,
+[data-type="legal"] .element-config-color,
+[data-type="logo"] .element-config-color,
+[data-type="video"] .element-config-color {
   display: none;
 }
 
