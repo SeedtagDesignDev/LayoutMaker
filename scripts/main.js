@@ -1270,7 +1270,10 @@ const layouts = {
                     css: 'width: 58%;height: 46%;left: 6%;bottom: 5%;max-width: unset !important;',
                 },
                 {
-                    css: 'width: 58%;height: 50%;left: 36%;bottom: 27%;max-width: unset !important;',
+                    css: 'width: 58%;height: 46%;left: 36%;bottom: 46%;max-width: unset !important;',
+                },
+                {
+                    css: 'width: 58%;height: 46%;left: 36%;bottom: 27%;max-width: unset !important;',
                 },
                 {
                     css: 'width: 58%;height: 46%;left: 36%;bottom: 5%;max-width: unset !important;',
@@ -1572,11 +1575,6 @@ const textareaCss = document.getElementById('result-css');
 
 // GENERATOR: CONFIG
 
-// Clear all
-document.querySelector('.generator-clear').addEventListener('click', () => {
-    emptyTextareas();
-});
-
 //  Select format: Hide layout collections + Update preview
 const addViewClasses = ( visibleScenes ) => {
     appContainer.classList.remove('view-full');
@@ -1722,7 +1720,7 @@ const createElementConfig = (elementType, parent) => {
     newGeneratorConfig.classList.add('element-config');
     newGeneratorConfig.innerHTML = `
     <input type="text" class="element-config-name" value="${elementType}${inputNameSuffix}">
-    <input type="number" class="element-config-layers" value="1">
+    <input type="number" min="0" class="element-config-layers" value="1">
     <select class="element-config-extension">
         ${createExtensionSelect(elementType)}
     </select>
@@ -1767,13 +1765,13 @@ const emptyTextareas = () => {
     }
 }
 
-const generateHtmlDiv = (textarea, name, trackable, layersAmount) => {
+const generateHtmlDiv = (textarea, createdLayoutElement) => {
     let layerCount = 1;
-    for (let i = 0; i < layersAmount; i++) {
-        let secondClame = (layersAmount == 1) ? '' : ` ${name}-${layerCount}`;
-        let idName = (layersAmount == 1) ? name : `${name}-${layerCount}`;
-        textarea.value += `    <div class="block ${name}${secondClame}`;
-        if (trackable) {
+    for (let i = 0; i < createdLayoutElement.layers; i++) {
+        let secondClame = (createdLayoutElement.layers == 1) ? '' : ` ${createdLayoutElement.name}-${layerCount}`;
+        let idName = (createdLayoutElement.layers == 1) ? createdLayoutElement.name : `${createdLayoutElement.name}-${layerCount}`;
+        textarea.value += `    <div class="block ${createdLayoutElement.name}${secondClame}`;
+        if (createdLayoutElement.trackable) {
             textarea.value += `" id="${idName}`;
         }
         textarea.value += `"></div>\n`;
@@ -1782,58 +1780,57 @@ const generateHtmlDiv = (textarea, name, trackable, layersAmount) => {
 }
 
 const generateHtml = () => {
-    let resultTextarea = document.querySelector('.result-html');
-    resultTextarea.value += `<div id="creative-container">\n\n`;
-    resultTextarea.value += `  <div class="${creationName.value.toLowerCase()}-container">\n`;
+    let textarea = document.querySelector('.result-html');
+    textarea.value += `<div id="creative-container">\n\n`;
+    textarea.value += `  <div class="${creationName.value.toLowerCase()}-container">\n`;
     let savedDecoy = {};
     
     // Run through all layouts (objects) and create main-container's HTML
     for (let i = 0; i < createdLayout.length; i++) {
         if (createdLayout[i].type == 'video') { continue; }
         if (createdLayout[i].decoy) {
-            savedDecoy.name = createdLayout[i].name;
-            savedDecoy.layers = createdLayout[i].layers;
+            savedDecoy = createdLayout[i];
             continue;
         }
-        generateHtmlDiv(resultTextarea, createdLayout[i].name, createdLayout[i].trackable, createdLayout[i].layers);
+        generateHtmlDiv(textarea, createdLayout[i]);
     }
 
     // Create the rest of the HTML (decoy-container)
-    resultTextarea.value += `  </div>\n\n`;
-    resultTextarea.value += `  <div class="decoy-container">\n`;
-    generateHtmlDiv(resultTextarea, savedDecoy.name, true, savedDecoy.layers);
-    resultTextarea.value += `  </div>\n\n`;
-    resultTextarea.value += `</div>\n`;
+    textarea.value += `  </div>\n\n`;
+    textarea.value += `  <div class="decoy-container">\n`;
+    generateHtmlDiv(textarea, savedDecoy);
+    textarea.value += `  </div>\n\n`;
+    textarea.value += `</div>\n`;
 }
 
 const generateAnimations = (firstScene) => {
-    let resultTextarea = document.querySelector(`.result-css-${firstScene}`);
+    let textarea = document.querySelector(`.result-css-${firstScene}`);
     let delay = 0.2;
-    resultTextarea.value += `\n\n/* === Animations === */\n\n`;
+    textarea.value += `\n\n/* === Animations === */\n\n`;
     
     for (let i = 0; i < createdLayout.length; i++) {
         
         if ((createdLayout[i].name == 'video') && (selectFormat.value == 'CEV')) {
-            resultTextarea.value += videoBarAnimation;
+            textarea.value += videoBarAnimation;
         } else if (createdLayout[i].animation != 'none') {
             let chosenAnimation = animations.find(x => x.value === createdLayout[i].animation);
-            resultTextarea.value += `.${createdLayout[i].name} {\n  `;
-            resultTextarea.value += chosenAnimation.from.replaceAll(';', ';\n  ');
-            resultTextarea.value += `.active &{\n    `;
-            resultTextarea.value += chosenAnimation.to.replaceAll(';', ';\n    ');
+            textarea.value += `.${createdLayout[i].name} {\n  `;
+            textarea.value += chosenAnimation.from.replaceAll(';', ';\n  ');
+            textarea.value += `.active &{\n    `;
+            textarea.value += chosenAnimation.to.replaceAll(';', ';\n    ');
 
             if (createdLayout[i].layers > 1) {
                 for (let count = 1; count <= createdLayout[i].layers; count++) {
                     delay += 0.1;
-                    resultTextarea.value += `&.${createdLayout[i].name}-${count} {  transition: 0.6s ${Math.round(delay * 100) / 100}s; }\n`;
-                    resultTextarea.value += (count < createdLayout[i].layers) ? `    ` : '';
+                    textarea.value += `&.${createdLayout[i].name}-${count} {  transition: 0.6s ${Math.round(delay * 100) / 100}s; }\n`;
+                    textarea.value += (count < createdLayout[i].layers) ? `    ` : '';
                 }
             } else {
-                resultTextarea.value += `transition: 0.6s ${Math.round(delay * 100) / 100}s;\n`;
+                textarea.value += `transition: 0.6s ${Math.round(delay * 100) / 100}s;\n`;
             }
 
-            resultTextarea.value += `  }\n`;
-            resultTextarea.value += `}\n\n`;
+            textarea.value += `  }\n`;
+            textarea.value += `}\n\n`;
             delay += 0.2;
         }
     
@@ -1842,10 +1839,6 @@ const generateAnimations = (firstScene) => {
         document.querySelector('.result-css-bar-video').value += `\n\n/* === Animations === */\n\n`;
         document.querySelector('.result-css-bar-video').value += videoBarAnimation;
     }
-}
-
-const findOption = (i, scene, size) => {
-    return createdLayout[i].layouts.find((layout) => (layout.scene === scene && layout.size === size)).option;
 }
 
 const setBreakAndIndentation = (textarea, lastLine, spaces) => {
@@ -1892,40 +1885,60 @@ const generateCssBackground = (textarea, createdLayout, foundLayout, spaces) => 
     }
 }
 
+const findOption = (createdLayout, scene, size) => {
+    return createdLayout.layouts.find((layout) => (layout.scene === scene && layout.size === size)).option;
+}
+
+const generateCssBody = (textarea, createdLayoutElement, scene) => {
+    let sceneShortcut = (scene === 'full') ? 'full' : 'bar';
+    let mainSize = (scene === 'full') ? 'horizontal' : 'desktop';
+    let querySize = (scene === 'full') ? 'vertical' : 'mobile';
+
+    textarea.value += `.${createdLayoutElement.name} {\n  `;
+
+    // CSS of main size
+    let selectedOption = findOption(createdLayoutElement, scene, mainSize);
+    let foundLayout = layouts[createdLayoutElement.type][sceneShortcut][mainSize][selectedOption];
+    textarea.value += foundLayout['css'].replaceAll(';', ';\n  ');
+    if (createdLayoutElement.type == 'bg') {
+        textarea.value += `background-color: ${createdLayoutElement.color};\n  `;
+    };
+    if (createdLayoutElement.asset == true) {
+        generateCssBackground(textarea, createdLayoutElement, foundLayout, 2);
+    };
+    
+    // CSS of query size
+    textarea.value += `\n  .${querySize} &{\n    `;
+    selectedOption = findOption(createdLayoutElement, scene, querySize);
+    foundLayout = layouts[createdLayoutElement.type][sceneShortcut][querySize][selectedOption];
+    textarea.value += foundLayout['css'].replaceAll(';', ';\n    ');
+    if (createdLayoutElement.asset == true) {
+        generateCssBackground(textarea, createdLayoutElement, foundLayout, 4);
+    };
+    textarea.value += `\n  }\n`;
+    textarea.value += `}\n\n`;
+}
+
 const generateCss = (relevantScenes) => {
     for (let scene of relevantScenes){
         // On each scene, define textarea and current scene-size
-        let resultTextarea = document.querySelector(`.result-css-${scene}`);
-        let sceneShortcut = (scene === 'full') ? 'full' : 'bar';
-        let mainSize = (scene === 'full') ? 'horizontal' : 'desktop';
-        let size = (scene === 'full') ? 'vertical' : 'mobile';
+        let textarea = document.querySelector(`.result-css-${scene}`);
+
+        // Start with the video
+        if ((selectFormat.value == 'CBV') || (selectFormat.value == 'CEV')) {
+            textarea.value += '/* === Video === */\n\n'
+            let createdLayoutVideo = createdLayout.find((layout) => (layout.type === 'video'));
+            generateCssBody(textarea, createdLayoutVideo, scene);
+            if (scene === 'full') { textarea.value += videoFullAdjustment };
+            textarea.value += '\n'
+        }
         
         // Write CSS for each element
+        textarea.value += '/* === Elements === */\n\n'
         for (let i = 0; i < createdLayout.length; i++) {
-            resultTextarea.value += `.${createdLayout[i].name} {\n  `;
-
-            // CSS of main size
-            let selectedOption = findOption(i, scene, mainSize);
-            let foundLayout = layouts[createdLayout[i].type][sceneShortcut][mainSize][selectedOption];
-            resultTextarea.value += foundLayout['css'].replaceAll(';', ';\n  ');
-            if (createdLayout[i].type == 'bg') {
-                resultTextarea.value += `background-color: ${createdLayout[i].color};\n  `;
-            };
-            if (createdLayout[i].asset == true) {
-                generateCssBackground(resultTextarea, createdLayout[i], foundLayout, 2);
-            };
-            
-            // CSS of query size
-            resultTextarea.value += `\n  .${size} &{\n    `;
-            selectedOption = findOption(i, scene, size);
-            resultTextarea.value += foundLayout['css'].replaceAll(';', ';\n    ');
-            if (createdLayout[i].asset == true) {
-                generateCssBackground(resultTextarea, createdLayout[i], foundLayout, 4);
-            };
-            resultTextarea.value += `\n  }\n`;
-            resultTextarea.value += `}\n\n`;
-
-            if (createdLayout[i].type == 'video' && sceneShortcut === 'full') { resultTextarea.value += videoFullAdjustment };
+            if (createdLayout[i].type !== 'video') {
+                generateCssBody(textarea, createdLayout[i], scene);
+            }
         }
     }
 }
