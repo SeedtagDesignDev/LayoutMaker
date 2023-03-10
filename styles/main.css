@@ -316,26 +316,15 @@ input[type=number]::-webkit-inner-spin-button {
   padding: 3px 0;
 }
 
-.building-CED.view-bar-video.view-bar-show .layout-collection,
-.building-CID.view-full.view-bar-show .layout-collection,
-.building-CEV.view-bar-video.view-bar-show .layout-collection,
-.building-CBV.view-full.view-bar-video.view-bar-show .layout-collection {
-  height: inherit;
-  max-height: none;
-  flex-wrap: nowrap;
-}
-
 .layout-collection {
   width: calc(50% - 10px);
-  max-height: calc(100vh - 210px);
   display: flex;
   position: relative;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow-x: scroll;
-  padding: 20px 10px 0px 10px;
+  overflow-x: hidden;
+  padding: 10px 10px 0px 10px;
   background-color: var(--main-st-light-blue);
   box-shadow: 1px 4px 30px 0px rgba(22,28,44,0.5);
   border-radius: 15px;
@@ -346,29 +335,37 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-tap-highlight-color: transparent;
 }
 
-.layout-collection::-webkit-scrollbar {
+.layout-collection-options::-webkit-scrollbar {
   height: 20px;
 }
 
-.layout-collection::-webkit-scrollbar-track {
+.layout-collection-options::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.layout-collection::-webkit-scrollbar-thumb {
+.layout-collection-options::-webkit-scrollbar-thumb {
   background: var(--main-st-lighter-blue);
   border-radius: 10px;
   border: 6px solid transparent;
   background-clip: content-box;
 }
 
-.layout-collection::-webkit-scrollbar-thumb:hover {
+.layout-collection-options::-webkit-scrollbar-thumb:hover {
   background: var(--main-st-grey);
   border: 6px solid transparent;
   background-clip: content-box;
 }
 
-.layout-collection p {
-  position: absolute;
+.layout-collection-config {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.layout-collection-config p {
   top: 8px;
   left: 20px;
   text-transform: uppercase;
@@ -376,11 +373,35 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 9px;
 }
 
-.layout-collection input[type="radio"] {
+.layout-collection-config .checkbox-label {
+  padding: 0;
+}
+
+.building-CED.view-bar-video.view-bar-show .layout-collection-options,
+.building-CID.view-full.view-bar-show .layout-collection-options,
+.building-CEV.view-bar-video.view-bar-show .layout-collection-options,
+.building-CBV.view-full.view-bar-video.view-bar-show .layout-collection-options {
+  height: inherit;
+  max-height: none;
+  flex-wrap: nowrap;
+}
+
+.layout-collection-options {
+  width: 100%;
+  max-height: calc(100vh - 210px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: scroll;
+}
+
+.layout-collection-options input[type="radio"] {
   display: none;
 }
 
-.layout-collection label {
+.layout-collection-options label {
   width: auto;
   display: flex;
   flex-direction: row;
@@ -394,7 +415,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 
-.layout-collection input[type="radio"]:checked + label {
+.layout-collection-options input[type="radio"]:checked + label {
   border: 1px dashed var(--main-st-grey);
 }
 
