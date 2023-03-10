@@ -374,6 +374,11 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 9px;
 }
 
+[data-type="video"] .layout-collection-config .element-config-visible-label,
+[data-type="video"] .layout-collection-config .element-config-display-label {
+  display: none;
+}
+
 .layout-collection-config .checkbox-label {
   padding: 0;
 }
@@ -415,9 +420,12 @@ input[type=number]::-webkit-inner-spin-button {
   gap: 10px;
 }
 
-
 .layout-collection-options input[type="radio"]:checked + label {
   border: 1px dashed var(--main-st-grey);
+}
+
+[data-type="video"] .layout-collection.layouts-bar-show {
+  display: none;
 }
 
 .layout-image-container {
@@ -616,6 +624,10 @@ button.generator-generate:hover{
   height: 80%;
   bottom: 10%;
   transform: translateX(-50%);
+}
+
+.preview-bar-show [data-type="video"] {
+  display: none;
 }
 
 .preview-image[data-type="video"] {
