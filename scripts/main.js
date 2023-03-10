@@ -2301,6 +2301,23 @@ const deletePreviewElement = (element) => {
     for (let element of previewElements) { element.remove(); }
 }
 
+const updatePreviewElementStyle = (input) => {
+    let type = input.dataset.type;
+    let count = input.dataset.count;
+    let scene = input.dataset.scene;
+    let size = input.dataset.size;
+    let property = input.dataset.property;
+    let previewElement = document.querySelector(`.preview-${type}-${count}-${scene}-${size}`);
+
+    if (property == 'opacity') {
+        previewElement.style.opacity = (input.checked) ? 1 : 0;
+    }
+    
+    if (property == 'display') {
+        previewElement.style.display = (input.checked) ? 'block' : 'none';
+    }
+}
+
 const updatePreviewElement = (input) => {
     let type = input.dataset.type;
     let count = input.dataset.count;
@@ -2380,7 +2397,7 @@ const createLayoutCollections = (elementType, parent) => {
             let amount = elementSettings[elementType].currentAmount;
             let newLayoutCollection = document.createElement('div');
             newLayoutCollection.setAttribute('class', `layout-collection layouts-${scene} layouts-${scene}-${size}`);
-            newLayoutCollection.innerHTML += `<div class="layout-collection-config"><p>${scene}: ${size}</p><label class="checkbox-label element-config-visible-label"><input type="checkbox" class="element-config-visible" checked><span></span>Visible</label></div>`;
+            newLayoutCollection.innerHTML += `<div class="layout-collection-config"><p>${scene}: ${size}</p><label class="checkbox-label element-config-visible-label"><input type="checkbox" class="element-config-visible" onchange="updatePreviewElementStyle(this)" data-type="${elementType}" data-scene="${scene}" data-size="${size}" data-count="${amount}" data-property="opacity" checked><span></span>Visible</label><label class="checkbox-label element-config-display-label"><input type="checkbox" class="element-config-display" onchange="updatePreviewElementStyle(this)" data-type="${elementType}" data-scene="${scene}" data-size="${size}" data-count="${amount}" data-property="display" checked><span></span>Display</label></div>`;
             
             // Create each layout input (thumbnail)
             let newLayoutCollectionOptions = document.createElement('div');
@@ -2602,6 +2619,20 @@ const generateCssExtra = (textarea, foundLayout, spaces) => {
     }
 }
 
+const generateCssDisplay = (textarea, foundLayout, display1, display2, spaces) => {
+    let lastLine = false;
+    if (spaces == 4 && !display1){
+        foundLayout.display = 'block';
+        pastePropertyIfExists(textarea, foundLayout, 'display', '', lastLine, spaces);
+        return true; // continue code
+    }
+    if ((spaces == 2 && !display1) || (spaces == 4 && !display2)) {
+        foundLayout.display = 'none';
+        pastePropertyIfExists(textarea, foundLayout, 'display', '', lastLine, spaces);
+        return false; // continue code
+    }
+}
+
 const generateCssVisibility = (textarea, foundLayout, visible1, visible2, spaces) => {
     let lastLine = false;
     if (spaces == 4 && !visible1){
@@ -2622,58 +2653,58 @@ const findValue = (createdLayout, scene, size, value) => {
     return createdLayout.layouts.find((layout) => (layout.scene === scene && layout.size === size))[value];
 }
 
-const generateCssElement = (textarea, createdLayoutElement, scene) => {
+const queriesNames = {
+    'full' : ['horizontal', 'vertical'],
+    'bar-video' : ['desktop', 'mobile'],
+    'bar-show' : ['desktop', 'mobile'],
+}
+
+
+const generateCssElementProperties = (textarea, createdLayoutElement, scene, blockBeingBuilt) => {
     // Define scene sizes and naming
     let sceneShortcut = (scene === 'full') ? 'full' : 'bar';
-    let mainSize = (scene === 'full') ? 'horizontal' : 'desktop';
-    let querySize = (scene === 'full') ? 'vertical' : 'mobile';
+    let spaces = (blockBeingBuilt == 'main') ? 2 : 4;
+    let size = (blockBeingBuilt == 'main') ? queriesNames[scene][0] : queriesNames[scene][1];
 
-    textarea.value += `.${createdLayoutElement.name} {`;
+    let selectedOption = findValue(createdLayoutElement, scene, size, 'option');
+    let foundLayout = layouts[createdLayoutElement.type][sceneShortcut][size][selectedOption];
 
-    // CSS of main size
-    let selectedOption = findValue(createdLayoutElement, scene, mainSize, 'option');
-    let foundLayout = layouts[createdLayoutElement.type][sceneShortcut][mainSize][selectedOption];
-    generateCssPositioning(textarea, foundLayout, 2);
+    // Step 0: Add display none and nothing else if checked
+    let displayValue1 = findValue(createdLayoutElement, scene, queriesNames[scene][0], 'display');
+    let displayValue2 = findValue(createdLayoutElement, scene, queriesNames[scene][1], 'display');
+    if (generateCssDisplay(textarea, foundLayout, displayValue1, displayValue2, spaces) == false) {
+        return; // returns true (continue) or false (end code here)
+    }
+    
+    // Step 1: Generate positioning
+    generateCssPositioning(textarea, foundLayout, spaces);
 
-    // Add background properties if relevant
-    if (createdLayoutElement.type == 'bg') {
+    // Step 2: Add background properties if relevant
+    if (createdLayoutElement.type == 'bg' && blockBeingBuilt == 'main') {
         textarea.value += `\n  background-color: ${createdLayoutElement.color};`;
     };
     if (createdLayoutElement.asset == true) {
-        generateCssBackground(textarea, createdLayoutElement, foundLayout, 2);
+        generateCssBackground(textarea, createdLayoutElement, foundLayout, spaces);
     };
     
-    // Add any extra CSS
+    // Step 3: Add any extra CSS
     if (!foundLayout.extra){
         foundLayout.extra = {};
     }
     generateCssExtra(textarea, foundLayout, 2);
 
-    // Visibility
-    let visibleValue1 = findValue(createdLayoutElement, scene, mainSize, 'visible');
-    let visibleValue2 = findValue(createdLayoutElement, scene, querySize, 'visible');
-    generateCssVisibility(textarea, foundLayout, visibleValue1, visibleValue2, 2);
-    
-    // CSS of query size
-    textarea.value += `\n  .${querySize} &`;
-    selectedOption = findValue(createdLayoutElement, scene, querySize, 'option');
-    foundLayout = layouts[createdLayoutElement.type][sceneShortcut][querySize][selectedOption];
-    generateCssPositioning(textarea, foundLayout, 4);
+    // Step 4: Add visibility
+    let visibleValue1 = findValue(createdLayoutElement, scene, queriesNames[scene][0], 'visible');
+    let visibleValue2 = findValue(createdLayoutElement, scene, queriesNames[scene][1], 'visible');
+    generateCssVisibility(textarea, foundLayout, visibleValue1, visibleValue2, spaces);
 
-    // Add background properties if relevant
-    if (createdLayoutElement.asset == true) {
-        generateCssBackground(textarea, createdLayoutElement, foundLayout, 4);
-    };
+}
 
-    // Add any extra CSS
-    if (!foundLayout.extra){
-        foundLayout.extra = {};
-    }
-    generateCssExtra(textarea, foundLayout, 4);
-
-    // Visibility
-    generateCssVisibility(textarea, foundLayout, visibleValue1, visibleValue2, 4);
-    
+const generateCssElement = (textarea, createdLayoutElement, scene) => {
+    textarea.value += `.${createdLayoutElement.name} {`;
+    generateCssElementProperties(textarea, createdLayoutElement, scene, 'main');
+    textarea.value += `\n  .${queriesNames[scene][1]} &`;
+    generateCssElementProperties(textarea, createdLayoutElement, scene, 'query');
     textarea.value += `\n  }\n`;
     textarea.value += `}\n\n`;
 }
@@ -2684,7 +2715,7 @@ const generateCss = (relevantScenes) => {
         let textarea = document.querySelector(`.result-css-${scene}`);
 
         // Start with the video
-        if (createdLayout.find(element => element.type == 'video')) {
+        if ((createdLayout.find(element => element.type == 'video') && (scene == 'full' || scene == 'bar-video'))) {
             textarea.value += '/* === Video === */\n\n'
             let createdLayoutVideo = createdLayout.find((layout) => (layout.type === 'video'));
             generateCssElement(textarea, createdLayoutVideo, scene);
@@ -2734,6 +2765,7 @@ const generateLayoutObject = () => {
                     layout.size = checkedLayouts[i].dataset.size;
                     layout.option = checkedLayouts[i].dataset.option;
                     layout.visible = layoutCollection.querySelector('.element-config-visible').checked;
+                    layout.display = layoutCollection.querySelector('.element-config-display').checked;
                     element.layouts.push(layout);
                 }
             }

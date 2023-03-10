@@ -357,6 +357,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .layout-collection-config {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
