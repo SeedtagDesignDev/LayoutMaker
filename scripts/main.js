@@ -2703,7 +2703,7 @@ const generateCssElementProperties = (textarea, createdLayoutElement, scene, blo
 const generateCssElement = (textarea, createdLayoutElement, scene) => {
     textarea.value += `.${createdLayoutElement.name} {`;
     generateCssElementProperties(textarea, createdLayoutElement, scene, 'main');
-    textarea.value += `\n  .${queriesNames[scene][1]} &`;
+    textarea.value += `\n  .${queriesNames[scene][1]} & {`;
     generateCssElementProperties(textarea, createdLayoutElement, scene, 'query');
     textarea.value += `\n  }\n`;
     textarea.value += `}\n\n`;
